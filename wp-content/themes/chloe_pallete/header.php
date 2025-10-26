@@ -80,7 +80,7 @@
                         <img src="<?php echo get_template_directory_uri(); ?>/images/logo.webp" alt="">
                     </a>
                     <div class="header_top_contact desktop img_full">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/header_contact.webp" alt="">
+                        <!-- <img src="<?php echo get_template_directory_uri(); ?>/images/header_contact.webp" alt=""> -->
                     </div>
                     <div class="header_top_hotline desktop">
                         <div class="header_top_hotline_phone img_full"> 
@@ -88,7 +88,7 @@
                         </div>
                         <div class="header_top_hotline_txt_wrap">
                             <div class="header_top_hotline_txt">Hotline:</div>
-                            <div class="header_top_hotline_tele txt_20 txt_bold">0943279803</div>
+                            <div class="header_top_hotline_tele txt_20 txt_bold">0966789058</div>
                         </div>
                     </div>
                     <div class="header_top_right tablet">
@@ -141,7 +141,14 @@
                                 <a href="#" class="header_menu_nav_item color_white txt_uppercase txt_15 txt_bold">giới thiệu</a>
                             </div>
                             <div class="header_menu_nav_wrap parent">
-                                <a href="#" class="header_menu_nav_item color_white txt_uppercase txt_15 txt_bold">dịch vụ</a>
+                                <div class="header_menu_nav_item_wrap">
+                                    <a href="#" class="header_menu_nav_item color_white txt_uppercase txt_15 txt_bold">dịch vụ</a>
+                                    <div class="header_menu_nav_item_child_icon img_full">
+                                        <svg width="100%" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.5 4.25L6 7.75L2.5 4.25" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </div>
+                                </div>
                                 <div class="header_menu_nav_child">
                                     <a href="#" class="header_menu_nav_child_item">LẮP ĐẶT SỬA CHỮA </a>
                                     <a href="#" class="header_menu_nav_child_item">THI CÔNG </a>
@@ -150,7 +157,14 @@
                                 </div>
                             </div>
                             <div class="header_menu_nav_wrap parent">
-                                <a href="#" class="header_menu_nav_item color_white txt_uppercase txt_15 txt_bold">sản phẩm</a>
+                                <div class="header_menu_nav_item_wrap">
+                                    <a href="#" class="header_menu_nav_item color_white txt_uppercase txt_15 txt_bold">sản phẩm</a>
+                                    <div class="header_menu_nav_item_child_icon img_full">
+                                        <svg width="100%" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.5 4.25L6 7.75L2.5 4.25" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </div>
+                                </div>
                                 <div class="header_menu_nav_child">
                                     <a href="#" class="header_menu_nav_child_item">THỢ HÀN SẮT</a>
                                     <a href="#" class="header_menu_nav_child_item">SỬA CỬA KÉO</a>

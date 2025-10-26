@@ -83,3 +83,5 @@
 [25-Oct-2025 10:10:20 UTC] PHP Notice:  Trying to access array offset on value of type null in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\typerocket\vendor\typerocket\core\src\Http\Responders\PostsResponder.php on line 40
 [25-Oct-2025 10:13:25 UTC] PHP Notice:  Trying to access array offset on value of type null in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\typerocket\vendor\typerocket\core\src\Http\Responders\PostsResponder.php on line 40
 [25-Oct-2025 10:13:34 UTC] PHP Notice:  Trying to access array offset on value of type null in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\typerocket\vendor\typerocket\core\src\Http\Responders\PostsResponder.php on line 40
+[26-Oct-2025 08:50:05 UTC] PHP Warning:  mysqli_real_connect(): (HY000/1045): Access denied for user 'h9c1fda5b3_wp_suacuasat_vn'@'localhost' (using password: YES) in D:\CuaSatWebsite\wp-includes\class-wpdb.php on line 1988
+[26-Oct-2025 08:50:05 UTC] PHP Warning:  mysqli_real_connect(): (HY000/1045): Access denied for user 'h9c1fda5b3_wp_suacuasat_vn'@'localhost' (using password: YES) in D:\CuaSatWebsite\wp-includes\class-wpdb.php on line 1988

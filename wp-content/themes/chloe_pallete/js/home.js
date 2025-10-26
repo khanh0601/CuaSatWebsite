@@ -77,7 +77,21 @@ const mainScript = () => {
       this.tl.play();
     }
     interact() {
-
+      $('.header_top_right_menu').on('click', function() {
+        $('.header').toggleClass('active');
+      });
+      $('body').on('click', function(e) {
+        if(!$(e.target).closest('.header_menu_nav_wrap').length && !$(e.target).closest('.header_top_right_menu').length) {
+          $('.header').removeClass('active');
+        }
+      });
+      if(viewport.w < 768) {
+        $('.header_menu_nav_item_child_icon').on('click', function(e) {
+          e.preventDefault();
+          $(this).closest('.header_menu_nav_wrap').toggleClass('active');
+          $(this).closest('.header_menu_nav_wrap').find('.header_menu_nav_child').slideToggle();
+        });
+      }
     }
     toggleColorMode = (color) => {
       let elArr = Array.from($(`[data-section="${color}"]`));
@@ -132,23 +146,64 @@ const mainScript = () => {
       super.init(this.play.bind(this));
     }
     setup() {
-      var swiper = new Swiper(".home_slider_inner", {
-        slidesPerView: 1,
-        spaceBetween: 0,
-        effect: "fade",
-        loop: true,
-        pagination: {
-          el: ".home_hero_pagination",
-          clickable: true,
-        },
-      });
+      // var swiper = new Swiper(".home_slider_inner", {
+      //   slidesPerView: 1,
+      //   spaceBetween: 0,
+      //   effect: "fade",
+      //   loop: true,
+      //   pagination: {
+      //     el: ".home_hero_pagination",
+      //     clickable: true,
+      //   },
+      // });
       var swiper1 = new Swiper(".home_news_inner", {
-        slidesPerView: 3,
+        slidesPerView: 1,
         spaceBetween: parseRem(30),
+        pagination: {
+          el: '.home_news .home_product_pagi',
+          bulletClass: 'home_product_pagi_item',
+          bulletActiveClass: 'active',
+          clickable: true, 
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          }
+        }
       });
+      if(viewport.w < 768) {
+        $('.home_service_list_wrap').addClass('swiper')
+        $('.home_service_list').addClass('swiper-wrapper')
+        $('.home_service_list_item').addClass('swiper-slide')
+        var swiperHomeService = new Swiper(".home_service_list_wrap", {
+          slidesPerView: 2,
+          spaceBetween: 16,
+          pagination: {
+            el: '.home_service .home_product_pagi',
+            bulletClass: 'home_product_pagi_item',
+            bulletActiveClass: 'active',
+            clickable: true, 
+          },
+        });
+      }
       var swiper2 = new Swiper(".home_partner_inner", {
-        slidesPerView: 6,
+        slidesPerView: 2,
         spaceBetween: parseRem(20),
+        breakpoints: {
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+          },
+          1024: {
+            slidesPerView: 6,
+            spaceBetween: 20,
+          }
+        }
       });
       $('[class*="home_product_swiper_"]').each(function (index, element) {
         var $this = $(element);
@@ -159,10 +214,25 @@ const mainScript = () => {
           return cls.startsWith('home_product_swiper_');
         });
         var categoryId = swiperClass.replace('home_product_swiper_', '');
+        var $container = $(`.${swiperClass}`).closest('.home_product_list');
+        if($(`.${swiperClass}`).find('.home_product_list_card_item').length <5) {
+          $container.find('.home_product_control').hide();
+          $container.find('.home_product_pagi').hide();
+        }
+
         new Swiper('.' + swiperClass, {
-          slidesPerView: 1,
-          spaceBetween: 20,
-          loop: true,
+          slidesPerView: 2,
+          spaceBetween: parseRem(12),
+          navigation: {
+            nextEl: $container.find('.home_product_control_item.next')[0],
+            prevEl: $container.find('.home_product_control_item.prev')[0],
+          },
+          pagination: {
+            el: $container.find('.home_product_pagi')[0],
+            bulletClass: 'home_product_pagi_item',
+            bulletActiveClass: 'active',
+            clickable: true, 
+          },
           breakpoints: {
             640: {
               slidesPerView: 2,
@@ -186,6 +256,7 @@ const mainScript = () => {
       $('.home_form_content_close').on('click', function() {
         $('.home_form').removeClass('active');
       });
+      
     }
     play() {
       this.tl.play();

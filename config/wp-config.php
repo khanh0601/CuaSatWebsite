@@ -27,6 +27,13 @@ define('DB_USER', 'root');
 
 /** MySQL database password */
 define('DB_PASSWORD', 'khanhkhanh123');
+// define( 'DB_NAME', 'h9c1fda5b3_wp_suacuasat_vn' );
+
+// /** Database username */
+// define( 'DB_USER', 'h9c1fda5b3_wp_suacuasat_vn' );
+
+// /** Database password */
+// define( 'DB_PASSWORD', 'g3C7YEasUBx6WuZHuF2f' );
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
