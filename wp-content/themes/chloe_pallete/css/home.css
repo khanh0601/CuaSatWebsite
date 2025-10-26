@@ -414,9 +414,16 @@
     display: flex;
     align-items: center;
     background-color: #fff;
-    border-color: #0563D5;
+    border: 1px solid #0563D5;
     justify-content: center;
-        box-shadow: rgba(99, 99, 99, 0.2) 0px .2rem .8rem 0px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px .2rem .8rem 0px;
+    transition: all .4s ease;
+    cursor: pointer;
+    &:hover{
+        background-color: #FFC401;
+        color: #000;
+        border-color: #FFC401 !important;
+    }
 }
 .home_form_content_close{
     width: 3.1rem;
