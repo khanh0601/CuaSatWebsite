@@ -86,3 +86,11 @@
 [26-Oct-2025 08:50:05 UTC] PHP Warning:  mysqli_real_connect(): (HY000/1045): Access denied for user 'h9c1fda5b3_wp_suacuasat_vn'@'localhost' (using password: YES) in D:\CuaSatWebsite\wp-includes\class-wpdb.php on line 1988
 [26-Oct-2025 08:50:05 UTC] PHP Warning:  mysqli_real_connect(): (HY000/1045): Access denied for user 'h9c1fda5b3_wp_suacuasat_vn'@'localhost' (using password: YES) in D:\CuaSatWebsite\wp-includes\class-wpdb.php on line 1988
 [27-Oct-2025 09:25:58 UTC] PHP Warning:  wp_update_themes(): Đã xảy ra lỗi không mong muốn. Có thể có sự cố với WordPress.org hoặc cấu hình của máy chủ. Nếu bạn tiếp tục gặp sự cố, vui lòng thử hỏi trong <a href="https://wordpress.org/support/forums/">diễn đàn hỗ trợ</a>. (WordPress không thể thiết lập kết nối an toàn tới WordPress.org. Vui lòng liên hệ quản trị máy chủ của bạn.) in D:\CuaSatWebsite\wp-includes\functions.php on line 6121
+[27-Oct-2025 17:26:43 UTC] PHP Notice:  Undefined index: des in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\page-templates\homepage.php on line 150
+[27-Oct-2025 17:26:43 UTC] PHP Notice:  Undefined index: des in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\page-templates\homepage.php on line 150
+[27-Oct-2025 17:26:43 UTC] PHP Notice:  Undefined index: des in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\page-templates\homepage.php on line 150
+[27-Oct-2025 17:26:43 UTC] PHP Notice:  Undefined index: des in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\page-templates\homepage.php on line 150
+[27-Oct-2025 17:29:23 UTC] PHP Notice:  Undefined index: des in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\page-templates\homepage.php on line 150
+[27-Oct-2025 17:29:23 UTC] PHP Notice:  Undefined index: des in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\page-templates\homepage.php on line 150
+[27-Oct-2025 17:29:23 UTC] PHP Notice:  Undefined index: des in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\page-templates\homepage.php on line 150
+[27-Oct-2025 17:29:23 UTC] PHP Notice:  Undefined index: des in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\page-templates\homepage.php on line 150

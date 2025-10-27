@@ -10,24 +10,63 @@ add_action('edit_form_after_title', function($post) use($editorSettings) {
 
         $form = tr_form();
         echo beginBox("Banner Chính",true);
-        echo $form->text('home_banner_video')->setLabel("Banner Video");
-        echo $form->image('home_banner_video_poster')->setLabel("Banner Video Poster");
-        echo $form->row(
-            $form->text('banner_content')->setLabel("Nội dung"),
-            $form->text('banner_link')->setLabel("Liên kết")
-        );
+        echo $form->image('home_banner')->setLabel("Ảnh Banner");
         echo endBox();
         //subdivision
 
         echo beginBox("Giới thiệu",true);
+        echo $form->image('home_intro')->setLabel("Ảnh giới thiệu");
+        echo $form->text('about_subtitle')->setLabel("Tiêu đề phụ");
         echo $form->text('about_title')->setLabel("Tiêu đề");
-        echo $form->editor('about_description')->setLabel("Mô tả");
+        echo $form->text('about_des')->setLabel("Mô tả");
+        echo $form->text('about_seemore')->setLabel("Xem thêm");
+        echo $form->text('about_link')->setLabel("Link");
         echo $form->repeater('about_items')->setLabel("Danh sách")->setFields([
-            $form->row(
-                $form->image('image')->setLabel("Logo"),
+                $form->text('amount')->setLabel("Số lượng"),
                 $form->text('title')->setLabel("Tiêu đề"),
-                $form->text('link')->setLabel("Liên kết")
-            )
+
+        ]);
+        echo endBox();
+
+
+        echo beginBox("Dịch vụ chính",true);
+        echo $form->text('service_title')->setLabel("Tiêu đề");
+        echo $form->text('service_des')->setLabel("Mô tả");
+        echo $form->repeater('service_items')->setLabel("Danh sách")->setFields([
+                $form->image('image')->setLabel("Ảnh"),
+                $form->text('link')->setLabel("Link"),
+                $form->text('title')->setLabel("Tiêu đề"),
+                $form->text('num')->setLabel("Thứ tự"),
+
+        ]);
+        echo endBox();
+
+        echo beginBox("Sản phẩm",true);
+        echo $form->text('product_title')->setLabel("Tiêu đề");
+        echo $form->text('product_des')->setLabel("Mô tả");
+        echo endBox();
+
+        echo beginBox("Công trình",true);
+        echo $form->text('construction_title')->setLabel("Tiêu đề");
+        echo $form->image('construction_img')->setLabel("Ảnh");
+        echo $form->repeater('construction_items')->setLabel("Danh sách")->setFields([
+                $form->image('image')->setLabel("Ảnh"),
+                $form->text('title')->setLabel("Tiêu đề"),
+                $form->text('des')->setLabel("Mô tả"),
+
+        ]);
+        echo endBox();
+
+         echo beginBox("Tin tức",true);
+        echo $form->text('news_title')->setLabel("Tiêu đề");
+        echo endBox();
+
+
+        echo beginBox("Đối tác",true);
+        echo $form->text('partner_title')->setLabel("Tiêu đề");
+        echo $form->text('partner_des')->setLabel("Mô tả");
+        echo $form->repeater('partner_items')->setLabel("Danh sách")->setFields([
+                $form->image('image')->setLabel("Ảnh"),
 
         ]);
         echo endBox();

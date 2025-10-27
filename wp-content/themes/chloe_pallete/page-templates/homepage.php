@@ -13,6 +13,40 @@
     get_header();
     wp_enqueue_style('home-css', get_template_directory_uri() . '/css/home.css');
     wp_enqueue_script('home-js', get_template_directory_uri() . '/js/home.js');
+    $pageID = get_queried_object_id();
+    // === Banner Chính ===
+$home_banner = wp_get_attachment_url(tr_posts_field('home_banner', $pageID));
+
+// === Giới thiệu ===
+$home_intro = wp_get_attachment_url(tr_posts_field('home_intro', $pageID));
+$about_subtitle = tr_posts_field('about_subtitle', $pageID);
+$about_title = tr_posts_field('about_title', $pageID);
+$about_des = tr_posts_field('about_des', $pageID);
+$about_seemore = tr_posts_field('about_seemore', $pageID);
+$about_link = tr_posts_field('about_link', $pageID);
+$about_items = tr_posts_field('about_items', $pageID); // Mỗi item: ['amount', 'title']
+
+// === Dịch vụ chính ===
+$service_title = tr_posts_field('service_title', $pageID);
+$service_des = tr_posts_field('service_des', $pageID);
+$service_items = tr_posts_field('service_items', $pageID); // Mỗi item: ['image', 'link', 'title', 'num']
+
+// === Sản phẩm ===
+$product_title = tr_posts_field('product_title', $pageID);
+$product_des = tr_posts_field('product_des', $pageID);
+
+// === Công trình ===
+$construction_title = tr_posts_field('construction_title', $pageID);
+$construction_img = wp_get_attachment_url(tr_posts_field('construction_img', $pageID));
+$construction_items = tr_posts_field('construction_items', $pageID); // Mỗi item: ['image', 'title', 'des']
+
+// === Tin tức ===
+$news_title = tr_posts_field('news_title', $pageID);
+
+// === Đối tác ===
+$partner_title = tr_posts_field('partner_title', $pageID);
+$partner_des = tr_posts_field('partner_des', $pageID);
+$partner_items = tr_posts_field('partner_items', $pageID); // Mỗi item: ['image']
 
 ?>
     <div class='main' data-barba-namespace="home">
@@ -58,7 +92,7 @@
         <div class="home_slider_inner">
             <div class="home_slider_list ">
                 <div class="home_slider_item  img_full">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/baner-co-khi-hoa-phat.png" alt="">
+                    <img src="<?php echo $home_banner ?>" alt="">
                 </div>
                 <!-- <div class="home_slider_item swiper-slide img_full">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/baner-co-khi-hoa-phat.png" alt="">
@@ -75,82 +109,48 @@
                 <div class="home_about_img img_abs">
                     <div class="home_about_img_inner">
                         <div class="home_about_img_overlay"></div>
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/home_about.jpg" alt="">
+                        <img src="<?php echo $home_intro ?>" alt="">
                     </div>
                 </div>
                 <div class="home_about_info">
-                    <div class="home_about_info_subtitle txt_20 txt_uppercase">Về chúng tôi</div>
-                    <div class="home_about_info_title txt_34 txt_uppercase">Giới thiệu về Cơ khí Tổng hợp Nguyễn Hải</div>
-                    <div class="home_about_info_des">Cơ khí Tổng hợp Nguyễn Hải hoạt động với phương châm "Chất lượng - Uy tín - Tiến độ", không ngừng cải tiến và đổi mới công nghệ để đảm bảo hiệu quả công việc, giảm chi phí cho khách hàng và nâng cao năng suất. Chúng tôi tự hào là đối tác tin cậy của nhiều doanh nghiệp trong các ngành công nghiệp chế tạo, xây dựng, nông nghiệp và nhiều lĩnh vực khác.</div>
-                    <a href="#" class="home_about_info_button txt_uppercase color_white">xem thêm</a>
+                    <div class="home_about_info_subtitle txt_20 txt_uppercase"><?= wp_kses_post($about_subtitle) ?></div>
+                    <div class="home_about_info_title txt_34 txt_uppercase"><?= wp_kses_post($about_title) ?></div>
+                    <div class="home_about_info_des"><?= wp_kses_post($about_des) ?></div>
+                    <a href="<?= wp_kses_post($about_link) ?>" class="home_about_info_button txt_uppercase color_white"><?= wp_kses_post($about_seemore) ?></a>
                 </div>
             </div>
             <div class="home_about_figure">
+                 <?php if (!empty($about_items)) : ?>
+                <?php foreach ($about_items as $item): ?>
                 <div class="home_about_figure_item">
-                    <div class="home_about_figure_item_num txt_title txt_48 txt_center">500+</div>
-                    <div class="home_about_figure_item_des txt_16 txt_center">Nhân Viên</div>
+                    <div class="home_about_figure_item_num txt_title txt_48 txt_center"><?= $item['amount'] ?>+</div>
+                    <div class="home_about_figure_item_des txt_16 txt_center"><?= $item['title'] ?></div>
                 </div>
-                <div class="home_about_figure_item">
-                    <div class="home_about_figure_item_num txt_title txt_48 txt_center">1000+</div>
-                    <div class="home_about_figure_item_des txt_16 txt_center">Dự Án Thiết Kế </div>
-                </div>
-                <div class="home_about_figure_item">
-                    <div class="home_about_figure_item_num txt_title txt_48 txt_center">900+</div>
-                    <div class="home_about_figure_item_des txt_16 txt_center">Khách Hàng </div>
-                </div>
-                <div class="home_about_figure_item">
-                    <div class="home_about_figure_item_num txt_title txt_48 txt_center">10+</div>
-                    <div class="home_about_figure_item_des txt_16 txt_center">Năm Kinh Nghiệm </div>
-                </div>
+                <?php endforeach; ?>
+              <?php endif; ?>
             </div>
         </div>
     </section>
     <section class="home_service">
         <div class="kl_container">
-            <div class="home_service_title txt_title txt_34">Dịch vụ chính</div>
-            <div class="home_service_des txt_des_border txt_center txt_wh_500">Uy tín chất lượng. Đảm bảo tiến độ.Mang tính thẩm mỹ cao. Giá cả hợp lý. Dich vụ nhanh chóng. Làm hài lòng với khách hàng</div>
+            <div class="home_service_title txt_title txt_34"><?= wp_kses_post($service_title) ?></div>
+            <div class="home_service_des txt_des_border txt_center txt_wh_500"><?= wp_kses_post($service_des) ?></div>
             <div class="home_service_list_wrap">
                 <div class="home_service_list">
-                    <a href="#" class="home_service_list_item">
+                     <?php if (!empty($service_items)) : ?>
+                <?php foreach ($service_items as $item): ?>
+                    <a href="<?= $item['link'] ?>" class="home_service_list_item">
                         <div class="home_service_list_item_img_wrap">
                             <div class="home_service_list_item_img img_scale img_full img_abs">
                                 <div class="home_service_list_item_img_overlay"></div>
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/home_service_1.webp" alt="">
+                                <img src="<?= esc_url(wp_get_attachment_url($item['image'])) ?>" alt="">
                             </div>
                         </div>
-                        <div class="home_service_list_item_title txt_uppercase txt_center txt_bold">LẮP ĐẶT SỬA CHỮA </div>
-                        <div class="home_service_list_item_num txt_36 txt_center txt_title">01</div>
+                        <div class="home_service_list_item_title txt_uppercase txt_center txt_bold"><?= $item['title'] ?></div>
+                        <div class="home_service_list_item_num txt_36 txt_center txt_title"><?= $item['num'] ?></div>
                     </a>
-                    <a href="#" class="home_service_list_item">
-                        <div class="home_service_list_item_img_wrap">
-                            <div class="home_service_list_item_img img_scale img_full img_abs">
-                                <div class="home_service_list_item_img_overlay"></div>
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/home_service_2.webp" alt="">
-                            </div>
-                        </div>
-                        <div class="home_service_list_item_title txt_uppercase txt_center txt_bold">thi công</div>
-                        <div class="home_service_list_item_num txt_36 txt_center txt_title">02</div>
-                    </a>
-                    <a href="#" class="home_service_list_item">
-                        <div class="home_service_list_item_img_wrap">
-                            <div class="home_service_list_item_img img_scale img_full img_abs">
-                                <div class="home_service_list_item_img_overlay"></div>
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/home_service_3.webp" alt="">
-                            </div>
-                        </div>
-                        <div class="home_service_list_item_title txt_uppercase txt_center txt_bold">Tư vấn báo giá</div>
-                        <div class="home_service_list_item_num txt_36 txt_center txt_title">03</div>
-                    </a>
-                    <a href="#" class="home_service_list_item">
-                        <div class="home_service_list_item_img_wrap">
-                            <div class="home_service_list_item_img img_scale img_full img_abs">
-                                <div class="home_service_list_item_img_overlay"></div>
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/home_service_4.webp" alt="">
-                            </div>
-                        </div>
-                        <div class="home_service_list_item_title txt_uppercase txt_center txt_bold">Thiết kế</div>
-                        <div class="home_service_list_item_num txt_36 txt_center txt_title">04</div>
-                    </a>
+                    <?php endforeach; ?>
+              <?php endif; ?>
                 </div>
             </div>
             <div class="home_product_pagi"></div>
@@ -158,8 +158,8 @@
     </section>
     <section class="home_product">
         <div class="kl_container">
-            <div class="home_product_title txt_title txt_34">sản phẩm</div>
-            <div class="home_product_des txt_des_border txt_wh_500 txt_center">Uy tín chất lượng. Đảm bảo tiến độ.Mang tính thẩm mỹ cao.Giá cả hợp lý. Dich vụ nhanh chóng. Làm hài lòng với khách hàng</div>
+            <div class="home_product_title txt_title txt_34"><?= wp_kses_post($product_title) ?></div>
+            <div class="home_product_des txt_des_border txt_wh_500 txt_center"><?= wp_kses_post($product_des) ?></div>
             <?php
                 // Lấy tất cả categories
                 $categories = get_categories([
@@ -251,55 +251,32 @@
     </section>
     <section class="home_construction">
         <div class="home_construction_inner">
-            <div class="home_construction_title txt_title txt_34 txt_des_border">Công trình</div>
+            <div class="home_construction_title txt_title txt_34 txt_des_border"><?= wp_kses_post($construction_title) ?></div>
             <div class="home_construction_img img_full">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/home_construction.webp" alt="">
+                <img src="<?php echo $construction_img ?>" alt="">
             </div>
         </div>
         <div class="kl_container">
             <div class="home_construction_list">
+                 <?php if (!empty($construction_items)) : ?>
+                <?php foreach ($construction_items as $item): ?>
                 <div class="home_construction_list_item">
                     <div class="home_construction_list_item_img img_full">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/home_construction_icon1.png" alt="">
+                        <img src="<?= esc_url(wp_get_attachment_url($item['image'])) ?>" alt="">
                     </div>
                     <div class="home_construction_list_item_info">
-                        <div class="home_construction_list_item_info_title txt_bold color_white txt_uppercase">Phục vụ tân tâm</div>
-                        <div class="home_construction_list_item_info_des txt_14 color_white ">Nhân viên giao hàng cần phải mở lòng và chấp nhận phản hồi từ khách hàng một cách xây dựng, dù đó là phản hồi tích cực hay tiêu cực.</div>
+                        <div class="home_construction_list_item_info_title txt_bold color_white txt_uppercase"><?= $item['title'] ?></div>
+                        <div class="home_construction_list_item_info_des txt_14 color_white "><?= $item['des'] ?></div>
                     </div>
                 </div>
-                <div class="home_construction_list_item">
-                    <div class="home_construction_list_item_img img_full">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/home_construction_icon2.png" alt="">
-                    </div>
-                    <div class="home_construction_list_item_info">
-                        <div class="home_construction_list_item_info_title txt_bold color_white txt_uppercase">CHUYÊN NGHIỆP </div>
-                        <div class="home_construction_list_item_info_des txt_14 color_white ">Thiết kế thi công trọn gói nhà ở chính là thuê một đơn vị thực hiện toàn bộ các hạng mục công việc như: sơn tường, trần nhà,</div>
-                    </div>
-                </div>
-                <div class="home_construction_list_item">
-                    <div class="home_construction_list_item_img img_full">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/home_construction_icon3.png" alt="">
-                    </div>
-                    <div class="home_construction_list_item_info">
-                        <div class="home_construction_list_item_info_title txt_bold color_white txt_uppercase">Sáng tạo</div>
-                        <div class="home_construction_list_item_info_des txt_14 color_white ">kế thi công trọn Sáng tạo ,  thi công xây dựng dân dụng, thi công nhà ở, thi công xây dựng nhà phố, xây dựng biệt thự, thi công ...</div>
-                    </div>
-                </div>
-                <div class="home_construction_list_item">
-                    <div class="home_construction_list_item_img img_full">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/home_construction_icon4.png" alt="">
-                    </div>
-                    <div class="home_construction_list_item_info">
-                        <div class="home_construction_list_item_info_title txt_bold color_white txt_uppercase">ĐÚNG TIẾN ĐỘ </div>
-                        <div class="home_construction_list_item_info_des txt_14 color_white "> Tiết kiệm thời gian và chi phí: Thiết kế thi công trọn gói giúp loại bỏ các bước không cần thiết, tiết kiệm thời gian và chi phí cho ...</div>
-                    </div>
-                </div>
+                <?php endforeach; ?>
+              <?php endif; ?>
             </div>
         </div>
     </section>
     <section class="home_news">
         <div class="kl_container">
-            <div class="home_news_title txt_title txt_34 txt_des_border">Tin tức mới</div>
+            <div class="home_news_title txt_title txt_34 txt_des_border"><?= wp_kses_post($news_title) ?></div>
             <div class="home_news_inner swiper">
                 <div class="home_news_list swiper-wrapper">
                 <?php
@@ -354,50 +331,19 @@
     </section>
     <section class="home_partner">
         <div class="kl_container">
-            <div class="home_partner_title txt_title txt_34">Đối tác</div>
-            <div class="home_partner_des txt_16 txt_wh_500 txt_center txt_des_border">Chúng tôi nhận làm, lắp đặt các loại cửa sắt, cửa cuốn, cửa kéo, cửa lùa, cửa xếp…Hãy đến với sửa cửa sắt Hòa Phát dịch vụ sửa cửa sắt tại nhà tphcm đảm bảo an toàn, chất lượng tốt.</div>
+            <div class="home_partner_title txt_title txt_34"><?= wp_kses_post($partner_title) ?></div>
+            <div class="home_partner_des txt_16 txt_wh_500 txt_center txt_des_border"><?= wp_kses_post($partner_des) ?></div>
             <div class="home_partner_inner swiper">
                 <div class="home_partner_list swiper-wrapper">
+                    <?php if (!empty($partner_items)) : ?>
+                <?php foreach ($partner_items as $item): ?>
                     <div class="home_partner_list_item swiper-slide">
                         <div class="home_partner_list_item_img img_full">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/home_partner_1.webp" alt="">
+                            <img src="<?= esc_url(wp_get_attachment_url($item['image'])) ?>" alt="">
                         </div>
                     </div>
-                    <div class="home_partner_list_item swiper-slide">
-                        <div class="home_partner_list_item_img img_full">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/home_partner_1.webp" alt="">
-                        </div>
-                    </div>
-                    <div class="home_partner_list_item swiper-slide">
-                        <div class="home_partner_list_item_img img_full">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/home_partner_1.webp" alt="">
-                        </div>
-                    </div>
-                    <div class="home_partner_list_item swiper-slide">
-                        <div class="home_partner_list_item_img img_full">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/home_partner_1.webp" alt="">
-                        </div>
-                    </div>
-                    <div class="home_partner_list_item swiper-slide">
-                        <div class="home_partner_list_item_img img_full">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/home_partner_1.webp" alt="">
-                        </div>
-                    </div>
-                    <div class="home_partner_list_item swiper-slide">
-                        <div class="home_partner_list_item_img img_full">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/home_partner_1.webp" alt="">
-                        </div>
-                    </div>
-                    <div class="home_partner_list_item swiper-slide">
-                        <div class="home_partner_list_item_img img_full">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/home_partner_1.webp" alt="">
-                        </div>
-                    </div>
-                    <div class="home_partner_list_item swiper-slide">
-                        <div class="home_partner_list_item_img img_full">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/home_partner_1.webp" alt="">
-                        </div>
-                    </div>
+                    <?php endforeach; ?>
+              <?php endif; ?>
                 </div>
             </div>
         </div>
