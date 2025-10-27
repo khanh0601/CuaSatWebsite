@@ -90,11 +90,63 @@
                                 <svg focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="#fff" d="M7.591 21.177q0-.54.377-.917l2.804-2.804a1.24 1.24 0 0 1 .913-.378q.565 0 .97.43-.038.041-.255.25-.215.21-.29.29a3 3 0 0 0-.2.256 1.1 1.1 0 0 0-.177.344 1.4 1.4 0 0 0-.046.37q0 .54.377.918a1.25 1.25 0 0 0 .918.377q.19.001.373-.047.189-.056.345-.175.135-.09.256-.2.15-.14.29-.29c.14-.142.223-.23.25-.254q.445.42.445.984 0 .539-.377.916l-2.778 2.79a1.24 1.24 0 0 1-.917.364q-.54-.001-.917-.35l-1.982-1.97a1.22 1.22 0 0 1-.378-.9zm9.477-9.504q0-.54.377-.917l2.777-2.79a1.24 1.24 0 0 1 .913-.378q.525-.001.917.364l1.984 1.968q.38.378.38.903 0 .54-.38.917l-2.802 2.804a1.24 1.24 0 0 1-.916.364q-.565 0-.97-.418.038-.04.255-.25a8 8 0 0 0 .29-.29q.108-.12.2-.255.121-.156.176-.344.048-.181.047-.37 0-.538-.377-.914a1.25 1.25 0 0 0-.917-.377q-.205 0-.37.046-.172.046-.346.175a4 4 0 0 0-.256.2q-.08.076-.29.29l-.25.258q-.441-.417-.442-.983zM5.003 21.177q0 1.617 1.146 2.736l1.982 1.968c.745.75 1.658 1.12 2.736 1.12q1.63 0 2.75-1.143l2.777-2.79c.75-.747 1.12-1.66 1.12-2.737q.002-1.66-1.183-2.818l1.186-1.185q1.16 1.185 2.805 1.186 1.617 0 2.75-1.13l2.803-2.81q1.127-1.132 1.128-2.748 0-1.62-1.146-2.738L23.875 6.12Q22.758 4.999 21.139 5q-1.63 0-2.75 1.146l-2.777 2.79c-.75.747-1.12 1.66-1.12 2.737q-.002 1.658 1.183 2.817l-1.186 1.186q-1.16-1.186-2.805-1.186-1.617 0-2.75 1.132L6.13 18.426Q5 19.559 5 21.176z"></path></svg>
                             </a>
                         </div>
-                        <div class="productdetail_info_right_view"></div>
-                        <div class="productdetail_info_right_price"></div>
-                        <div class="productdetail_info_right_des"></div>
+                        <div class="productdetail_info_right_view">
+                            <div class="productdetail_info_right_view_icon svg_full">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.42012 12.7132C2.28394 12.4975 2.21584 12.3897 2.17772 12.2234C2.14909 12.0985 2.14909 11.9015 2.17772 11.7766C2.21584 11.6103 2.28394 11.5025 2.42012 11.2868C3.54553 9.50484 6.8954 5 12.0004 5C17.1054 5 20.4553 9.50484 21.5807 11.2868C21.7169 11.5025 21.785 11.6103 21.8231 11.7766C21.8517 11.9015 21.8517 12.0985 21.8231 12.2234C21.785 12.3897 21.7169 12.4975 21.5807 12.7132C20.4553 14.4952 17.1054 19 12.0004 19C6.8954 19 3.54553 14.4952 2.42012 12.7132Z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12.0004 15C13.6573 15 15.0004 13.6569 15.0004 12C15.0004 10.3431 13.6573 9 12.0004 9C10.3435 9 9.0004 10.3431 9.0004 12C9.0004 13.6569 10.3435 15 12.0004 15Z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div><div class="productdetail_info_right_view_amount txt_14">52</div>
+                        </div>
+                        <div class="productdetail_info_right_price">
+                            <div class="productdetail_info_right_price_title txt_16 txt_wh_500">Giá bán:</div>
+                            <div class="productdetail_info_right_price_contact txt_20 txt_bold">Liên hệ</div>
+                        </div>
+                        <div class="productdetail_info_right_des">Cơ khí Tổng Hợp chuyên sửa chữa cửa sắt tại nhà TPHCM, liên hệ 0943279803 Mr.Hải . Sữa cửa sắt khó đóng mở, gẫy bản lề, cửa sệ , cửa kéo thay bạc đạn, bị kẹt, sửa cửa cuốn. </div>
                     </div>
                 </div>
+            </div>
+        </section>
+        <section class="productdetail_detail">
+            <div class="kl_container">
+                <div class="productdetail_detail_title txt_uppercase txt_17">Thông tin về sản phẩm</div>
+                <div class="productdetail_detail_des">
+                    <div class="productdetail_detail_des_img txt_center">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/product_content.jpg" alt="">
+                    </div>
+                </div>
+                <div class="productdetail_detail_show">
+                    <div class="productdetail_detail_show_txt seemore active">
+                        <div class="productdetail_detail_show_txt_wrap">
+                            <div class="productdetail_detail_show_txt_inner">
+                                Xem thêm
+                            </div>
+                            <div class="productdetail_detail_show_txt_icon svg_full">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 20 20" fill="none">
+                                    <path d="M5 7.5L10 12.5L15 7.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="productdetail_detail_show_txt compact">
+                        <div class="productdetail_detail_show_txt_wrap">
+                            <div class="productdetail_detail_show_txt_inner">
+                                Thu gọn
+                            </div>
+                            <div class="productdetail_detail_show_txt_icon svg_full">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 20 20" fill="none">
+                                    <path d="M5 7.5L10 12.5L15 7.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <section class="productdetail_relate">
+            <div class="kl_container">
+                <div class="productdetail_detail_title txt_uppercase txt_17">Sản phẩm cùng loại</div>
             </div>
         </section>
 
