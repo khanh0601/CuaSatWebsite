@@ -94,3 +94,6 @@
 [27-Oct-2025 17:29:23 UTC] PHP Notice:  Undefined index: des in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\page-templates\homepage.php on line 150
 [27-Oct-2025 17:29:23 UTC] PHP Notice:  Undefined index: des in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\page-templates\homepage.php on line 150
 [27-Oct-2025 17:29:23 UTC] PHP Notice:  Undefined index: des in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\page-templates\homepage.php on line 150
+[28-Oct-2025 16:57:05 UTC] PHP Notice:  Trying to access array offset on value of type null in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\typerocket\vendor\typerocket\core\src\Http\Responders\PostsResponder.php on line 40
+[28-Oct-2025 16:57:05 UTC] PHP Notice:  Trying to access array offset on value of type null in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\typerocket\vendor\typerocket\core\src\Http\Responders\PostsResponder.php on line 40
+[28-Oct-2025 16:57:05 UTC] PHP Notice:  Trying to access array offset on value of type null in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\typerocket\vendor\typerocket\core\src\Http\Responders\PostsResponder.php on line 40

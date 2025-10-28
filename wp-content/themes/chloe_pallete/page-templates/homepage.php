@@ -164,17 +164,16 @@ $partner_items = tr_posts_field('partner_items', $pageID); // Mỗi item: ['imag
                 // Lấy tất cả categories
                 $categories = get_categories([
                     'taxonomy'   => 'category',
-                    'hide_empty' => true, // Chỉ lấy category có bài viết
+                    'hide_empty' => true,
                     'orderby'    => 'name',
                     'order'      => 'ASC',
                 ]);
 
                 // Loop qua từng category
                 foreach ($categories as $category):
-                    // Lấy các bài viết thuộc category hiện tại
                     $posts = get_posts([
                         'category'       => $category->term_id,
-                        'posts_per_page' => -1, // Lấy tất cả bài viết, hoặc đổi thành số cụ thể
+                        'posts_per_page' => -1,
                         'orderby'        => 'date',
                         'order'          => 'DESC',
                     ]);
@@ -280,10 +279,9 @@ $partner_items = tr_posts_field('partner_items', $pageID); // Mỗi item: ['imag
             <div class="home_news_inner swiper">
                 <div class="home_news_list swiper-wrapper">
                 <?php
-                    // Lấy tất cả bài viết có post type 'tin-tuc'
                     $args = [
                         'post_type'      => 'tin-tuc',
-                        'posts_per_page' => -1, // Lấy tất cả, hoặc số cụ thể như 10
+                        'posts_per_page' => -1,
                         'orderby'        => 'date',
                         'order'          => 'DESC',
                         'post_status'    => 'publish',
