@@ -114,7 +114,7 @@ $partner_items = tr_posts_field('partner_items', $pageID); // Mỗi item: ['imag
                 </div>
                 <div class="home_about_info">
                     <div class="home_about_info_subtitle txt_20 txt_uppercase"><?= wp_kses_post($about_subtitle) ?></div>
-                    <div class="home_about_info_title txt_34 txt_uppercase"><?= wp_kses_post($about_title) ?></div>
+                    <h2 class="home_about_info_title txt_34 txt_uppercase"><?= wp_kses_post($about_title) ?></h2>
                     <div class="home_about_info_des"><?= wp_kses_post($about_des) ?></div>
                     <a href="<?= wp_kses_post($about_link) ?>" class="home_about_info_button txt_uppercase color_white"><?= wp_kses_post($about_seemore) ?></a>
                 </div>
@@ -133,7 +133,7 @@ $partner_items = tr_posts_field('partner_items', $pageID); // Mỗi item: ['imag
     </section>
     <section class="home_service">
         <div class="kl_container">
-            <div class="home_service_title txt_title txt_34"><?= wp_kses_post($service_title) ?></div>
+            <h2 class="home_service_title txt_title txt_34"><?= wp_kses_post($service_title) ?></h2>
             <div class="home_service_des txt_des_border txt_center txt_wh_500"><?= wp_kses_post($service_des) ?></div>
             <div class="home_service_list_wrap">
                 <div class="home_service_list">
@@ -158,7 +158,7 @@ $partner_items = tr_posts_field('partner_items', $pageID); // Mỗi item: ['imag
     </section>
     <section class="home_product">
         <div class="kl_container">
-            <div class="home_product_title txt_title txt_34"><?= wp_kses_post($product_title) ?></div>
+            <h2 class="home_product_title txt_title txt_34"><?= wp_kses_post($product_title) ?></h2>
             <div class="home_product_des txt_des_border txt_wh_500 txt_center"><?= wp_kses_post($product_des) ?></div>
             <?php
                 // Lấy tất cả categories
@@ -214,33 +214,33 @@ $partner_items = tr_posts_field('partner_items', $pageID); // Mỗi item: ['imag
 					        <div class="home_product_list_wrap swiper home_product_swiper_<?php echo $category->term_id; ?>">
 					            <div class="home_product_list_card swiper-wrapper">
 					                <?php foreach ($posts as $post): setup_postdata($post); ?>
-										                    <div class="home_product_list_card_item swiper-slide">
-										                        <div class="home_product_list_card_item_img_wrap">
-										                            <a href="<?php echo get_permalink($post->ID); ?>" class="home_product_list_card_item_img img_scale img_full img_abs">
-										                                <div class="home_product_list_card_item_img_overlay"></div>
-										                                <?php if (has_post_thumbnail($post->ID)): ?>
-										                                    <?php echo get_the_post_thumbnail($post->ID, 'full'); ?>
-										                                <?php else: ?>
-					                                    <img src="<?php echo get_template_directory_uri(); ?>/images/home_product_hansat.jpg" alt="">
-					                                <?php endif; ?>
-                            </a>
-                        </div>
-                        <div class="home_product_list_card_item_info">
-                            <a href="<?php echo get_permalink($post->ID); ?>" class="home_product_list_card_item_title txt_16 txt_bold txt_uppercase txt_center">
-                                <?php echo get_the_title($post->ID); ?>
-                            </a>
-                            <div class="home_product_list_card_item_des txt_center">
-                                <?php echo wp_trim_words(get_the_excerpt($post->ID), 20); ?>
+                                        <div class="home_product_list_card_item swiper-slide">
+                                            <div class="home_product_list_card_item_img_wrap">
+                                                <a href="<?php echo get_permalink($post->ID); ?>" class="home_product_list_card_item_img img_scale img_full img_abs">
+                                                    <div class="home_product_list_card_item_img_overlay"></div>
+                                                    <?php if (has_post_thumbnail($post->ID)): ?>
+                                                        <?php echo get_the_post_thumbnail($post->ID, 'full'); ?>
+                                                    <?php else: ?>
+                                                        <img src="<?php echo get_template_directory_uri(); ?>/images/home_product_hansat.jpg" alt="">
+                                                    <?php endif; ?>
+                                                </a>
+                                            </div>
+                                            <div class="home_product_list_card_item_info">
+                                                <a href="<?php echo get_permalink($post->ID); ?>" class="home_product_list_card_item_title txt_16 txt_bold txt_uppercase txt_center">
+                                                    <?php echo get_the_title($post->ID); ?>
+                                                </a>
+                                                <div class="home_product_list_card_item_des txt_center">
+                                                    <?php echo wp_trim_words(get_the_excerpt($post->ID), 20); ?>
+                                                </div>
+                                                <div class="home_product_list_card_item_sub txt_14 txt_bold txt_uppercase">
+                                                    Đăng ký nhận báo giá
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <?php endforeach;
+                                    wp_reset_postdata(); ?>
+                                </div>
                             </div>
-                            <div class="home_product_list_card_item_sub txt_14 txt_bold txt_uppercase">
-                                Đăng ký nhận báo giá
-                            </div>
-                        </div>
-                    </div>
-                <?php endforeach;
-                wp_reset_postdata(); ?>
-            </div>
-        </div>
         <div class="home_product_pagi"></div>
     </div>
 <?php
@@ -251,7 +251,7 @@ $partner_items = tr_posts_field('partner_items', $pageID); // Mỗi item: ['imag
     </section>
     <section class="home_construction">
         <div class="home_construction_inner">
-            <div class="home_construction_title txt_title txt_34 txt_des_border"><?= wp_kses_post($construction_title) ?></div>
+            <h2 class="home_construction_title txt_title txt_34 txt_des_border"><?= wp_kses_post($construction_title) ?></h2>
             <div class="home_construction_img img_full">
                 <img src="<?php echo $construction_img ?>" alt="">
             </div>
@@ -276,7 +276,7 @@ $partner_items = tr_posts_field('partner_items', $pageID); // Mỗi item: ['imag
     </section>
     <section class="home_news">
         <div class="kl_container">
-            <div class="home_news_title txt_title txt_34 txt_des_border"><?= wp_kses_post($news_title) ?></div>
+            <h2 class="home_news_title txt_title txt_34 txt_des_border"><?= wp_kses_post($news_title) ?></h2>
             <div class="home_news_inner swiper">
                 <div class="home_news_list swiper-wrapper">
                 <?php
@@ -294,35 +294,35 @@ $partner_items = tr_posts_field('partner_items', $pageID); // Mỗi item: ['imag
                     if ($tin_tuc_query->have_posts()):
                         while ($tin_tuc_query->have_posts()): $tin_tuc_query->the_post();
                         ?>
-								    <div class="home_news_list_item swiper-slide">
-								        <a href="<?php the_permalink(); ?>" class="home_news_list_item_img_wrap">
-								            <div class="home_news_list_item_img img_full img_abs img_scale">
-								                <div class="home_news_list_item_img_lay"></div>
-								                <?php if (has_post_thumbnail()): ?>
-								                    <?php the_post_thumbnail('full'); ?>
-								                <?php else: ?>
+						<div class="home_news_list_item swiper-slide">
+							<a href="<?php the_permalink(); ?>" class="home_news_list_item_img_wrap">
+								<div class="home_news_list_item_img img_full img_abs img_scale">
+								    <div class="home_news_list_item_img_lay"></div>
+                                    <?php if (has_post_thumbnail()): ?>
+                                        <?php the_post_thumbnail('full'); ?>
+                                    <?php else: ?>
 				                    <img src="<?php echo get_template_directory_uri(); ?>/images/home_product_cuamoi.jpg" alt="<?php the_title(); ?>">
-				                <?php endif; ?>
-            </div>
-        </a>
-        <div class="home_news_list_item_info">
-            <div class="home_news_list_item_time"><?php echo get_the_date('d \t\h\á\n\g m, Y'); ?></div>
-            <a href="<?php the_permalink(); ?>" class="home_news_list_item_title txt_16 txt_bold">
-                <?php the_title(); ?>
-            </a>
-            <div class="home_news_list_item_des txt_14">
-                <?php echo wp_trim_words(get_the_excerpt(), 40, '...'); ?>
-            </div>
-            <a href="<?php the_permalink(); ?>" class="home_news_list_item_link txt_13">Xem Thêm</a>
-        </div>
-    </div>
-<?php
-    endwhile;
-    wp_reset_postdata();
-    else:
-?>
-    <p>Không có tin tức nào.</p>
-<?php endif; ?>
+				                    <?php endif; ?>
+                                </div>
+                            </a>
+                            <div class="home_news_list_item_info">
+                                <div class="home_news_list_item_time"><?php echo get_the_date('d \t\h\á\n\g m, Y'); ?></div>
+                                <a href="<?php the_permalink(); ?>" class="home_news_list_item_title txt_16 txt_bold">
+                                    <?php the_title(); ?>
+                                </a>
+                                <div class="home_news_list_item_des txt_14">
+                                    <?php echo wp_trim_words(get_the_excerpt(), 40, '...'); ?>
+                                </div>
+                                <a href="<?php the_permalink(); ?>" class="home_news_list_item_link txt_13">Xem Thêm</a>
+                            </div>
+                        </div>
+                    <?php
+                        endwhile;
+                        wp_reset_postdata();
+                        else:
+                    ?>
+                        <p>Không có tin tức nào.</p>
+                    <?php endif; ?>
 
                 </div>
             </div>
@@ -331,7 +331,7 @@ $partner_items = tr_posts_field('partner_items', $pageID); // Mỗi item: ['imag
     </section>
     <section class="home_partner">
         <div class="kl_container">
-            <div class="home_partner_title txt_title txt_34"><?= wp_kses_post($partner_title) ?></div>
+            <h2 class="home_partner_title txt_title txt_34"><?= wp_kses_post($partner_title) ?></h2>
             <div class="home_partner_des txt_16 txt_wh_500 txt_center txt_des_border"><?= wp_kses_post($partner_des) ?></div>
             <div class="home_partner_inner swiper">
                 <div class="home_partner_list swiper-wrapper">

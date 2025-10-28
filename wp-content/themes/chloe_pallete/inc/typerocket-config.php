@@ -73,55 +73,62 @@ add_action('edit_form_after_title', function($post) use($editorSettings) {
 
     }
 
-    else if($post->post_type == 'page' && basename(get_page_template())=="aboutus.php") {
+    else if($post->post_type == 'page' && basename(get_page_template())=="about.php") {
         remove_post_type_support( 'page', 'editor' );
 
 
         $form = tr_form();
-        echo beginBox("Banner Chính",true);
-        echo $form->row(
-            $form->image('banner_image')->setLabel("Banner"),
-            $form->image('banner_image_mobile')->setLabel("Banner Mobile")
-        );
-        echo $form->row(
-            $form->text('banner_title')->setLabel("Tiêu đề"),
-            $form->textarea('banner_content')->setLabel("Nội dung")
-        );
+        echo beginBox("Nội dung",true);
+        echo $form->text('about_title')->setLabel("Tiêu đề");
+        echo $form->editor('about_des')->setLabel("Mô tả");
         echo endBox();
 
-        echo beginBox("Tổng quan",true);
-        echo $form->row(
-            $form->image('oveview_bg')->setLabel("Hình ảnh")
-        );
-        echo $form->repeater('oveview_items')->setLabel("Nội dung")->setFields([
-            $form->repeater('group')->setLabel("")->setFields([
-                $form->row(
-                        $form->text('title')->setLabel("Tiêu đề"),
-                        $form->text('content')->setLabel("Mô tả"),
-                        $form->checkbox('highlight')->setLabel("Nổi bật")
-                    )
-            ])
+        echo beginBox("Chia sẻ",true);
+        echo $form->image('img_fb')->setLabel("ảnh facebook");
+        echo $form->image('img_mess')->setLabel("ảnh message");
+        echo $form->image('img_twist')->setLabel("ảnh twist");
+        echo $form->image('img_copy')->setLabel("ảnh copy");
+        echo endBox();
+
+
+    }
+
+
+    else if($post->post_type == 'page' && basename(get_page_template())=="construction.php") {
+        remove_post_type_support( 'page', 'editor' );
+
+        $form = tr_form();
+        echo beginBox("Nội dung",true);
+        echo $form->text('construction_title')->setLabel("Tiêu đề");
+        echo endBox();
+
+        echo beginBox("Danh sách",true);
+
+        echo $form->repeater('construction_items')->setLabel("Danh sách")->setFields([
+                $form->image('image')->setLabel("Ảnh"),
+                $form->text('title')->setLabel("Tiêu đề"),
+                $form->text('link')->setLabel("link"),
         ]);
         echo endBox();
 
 
+
     }
 
-
-    else if($post->post_type == 'page' && basename(get_page_template())=="thanks.php") {
+    else if($post->post_type == 'page' && basename(get_page_template())=="contact.php") {
         remove_post_type_support( 'page', 'editor' );
 
         $form = tr_form();
-        echo beginBox("Banner Chính",true);
-        echo $form->image('banner')->setLabel("Hình banner");
-        echo $form->text('banner_title')->setLabel("Tiêu đề");
-        echo $form->editor('banner_description')->setLabel("Nội dung");
+        echo beginBox("Nội dung",true);
+        echo $form->text('contact_map')->setLabel("link map");
+        echo $form->text('contact_name')->setLabel("Tên công ty");
+        echo $form->editor('contact_des')->setLabel("Địa chỉ");
+        echo $form->text('contact_title')->setLabel("Tiêu đề liên hệ");
         echo endBox();
 
 
 
     }
-
 
     else if($post->post_type == 'page'){
         $form = tr_form();

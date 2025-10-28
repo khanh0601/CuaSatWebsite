@@ -1,0 +1,25 @@
+.construction_content_title{
+    margin-bottom: 2rem;
+}
+.construction_content_list_item_title{
+    font-weight: 600;
+    transition: all .4s ease;
+    &:hover{
+        color: #0563D5;
+    }
+}
+.construction_content_list_item_img{
+    margin-bottom: 1rem;
+}
+.construction_content_list{
+    display: flex;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    padding-bottom: 2.5rem;
+}
+.construction_content_list_item{
+    width: calc(33.33% - 1.66667rem);
+}
+.construction_content{
+    padding-top: 2.5rem;
+}
