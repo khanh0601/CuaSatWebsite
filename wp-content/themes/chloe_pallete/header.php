@@ -72,7 +72,7 @@
   <?= tr_options_field('tr_theme_options.script_body');?>
 
   <!-- Header -->
-  <header class="header">
+    <header class="header">
         <div class="header_top">
             <div class="kl_container">
                 <div class="header_top_inner">
@@ -232,4 +232,37 @@
             </div>
         </div>
     </header>
+    <section class="btn_icon desktop">
+        <div class="btn_icon_inner">
+            <a href="#" class="btn_icon_item">
+                <div class="btn_icon_item_img img_full">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/icon-map.webp" alt="">
+                </div>
+                <div class="btn_icon_item_txt">Tìm đường</div>
+            </a>
+             <a href="#" class="btn_icon_item">
+                <div class="btn_icon_item_img img_full">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/icon_zalo.png" alt="">
+                </div>
+                <div class="btn_icon_item_txt">Chat Zalo</div>
+            </a>
+             <a href="#" class="btn_icon_item">
+                <div class="btn_icon_item_img img_full">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/icon_tel.png" alt="">
+                </div>
+                <div class="btn_icon_item_txt">Gọi điện</div>
+            </a>
+             <a href="#" class="btn_icon_item">
+                <div class="btn_icon_item_img img_full">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/icon_mess.webp" alt="">
+                </div>
+                <div class="btn_icon_item_txt">Messenger</div>
+            </a>
+        </div>
+    </section>
+    <section class="icon_top">
+        <a href="#top" class="icon_top_inner img_full">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/icon_top.png" alt="">
+        </a>
+    </section>
   <div  class="fp-custom ">

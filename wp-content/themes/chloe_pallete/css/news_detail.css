@@ -1,0 +1,213 @@
+.news_detail_content{
+    padding-top: 2.5rem;
+}
+
+.news_detail_content_des{
+    img{
+        width: 100%;
+    }
+}
+
+/* share */
+.about_share_inner{
+    padding: 1.7rem 1.0rem 1.0rem 1.0rem;
+    line-height: normal;
+    background: rgba(128, 128, 128, 0.15);
+    margin-top: 1.5rem;
+    border-radius: .5rem;
+}
+.about_share{
+    padding-bottom: 2.5rem;
+}
+.about_share_txt{
+    margin-bottom: .5rem;
+}
+.productdetail_info_right_social_item{
+    width: 3rem;
+    height: 3rem;
+    border-radius:.4rem ;
+    transition: all .4s ease;
+    &:hover{
+        opacity: .7;
+    }
+}
+.productdetail_info_right_social{
+    display: flex;
+    gap: .4rem;
+}
+
+
+/* relate */
+
+/* productdetail_relate */
+.productdetail_relate .productdetail_detail_title{
+    margin-top: 2.5rem;
+}
+.home_product{
+    padding: 6rem 0 4rem;
+}
+.home_product_list {
+    margin-bottom: 4rem;
+}
+.home_product_list_title{
+    position: relative;
+    padding: .75rem 7.8rem .75rem 2.4rem;
+    background: linear-gradient(180deg, #0563D5 0%, #0052B6 100%);
+    width: max-content;
+}
+.home_product_list_title_wrap{
+    border-bottom: 2px solid #0152b6;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.home_product_control{
+    display: flex;
+    gap: 1rem;
+}
+.home_product_control_item{
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 1px solid #0563D5;
+    color: #0563D5;
+    cursor: pointer;
+    transition: color .4s ease, background-color .4s ease, opacity .4s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+        color: #fff;
+        background-color: #0563D5;
+    }
+    &.swiper-button-disabled {
+        opacity: .5;
+        pointer-events: none;
+    }
+    .home_product_control_item_img{
+        width: 1.4rem;
+        display: flex;
+    }
+}
+.home_product_list_title_bg{
+    position: absolute;
+    top: 0;
+    right: -5.9rem;
+    width: 5.9rem;
+    bottom: 0;
+}
+.home_product_list_card_item_des{
+    line-height: 1.5;
+    max-height: 4.5rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Số dòng hiển thị */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 2rem;
+}
+.home_product_list_card_item_sub{
+    cursor: pointer;
+    margin-top: auto;
+    transition: all .4s ease;
+    width: 100%;
+    margin-inline: auto;
+    color: #111;
+    background-color: #FFC401;
+    height: 4.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover{
+        color: #fff;
+        background-color: #fc0000;
+    }
+}
+.home_product_list_card_item_img_wrap{
+    overflow: hidden;
+}
+.home_product_list_card_item_img{
+    position: relative;
+    margin-bottom: 1rem;
+}
+.home_product_list_card_item_img_overlay{
+    padding-top: 80%;
+}
+.home_product_list_card_item_info{
+    padding: 2rem ;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.home_product_pagi {
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+    margin-top: 2rem;
+    .home_product_pagi_item{
+        cursor: pointer;
+        width: .8rem;
+        height: .8rem;
+        background-color: #929292;
+        border-radius: 10rem;
+        transition: background-color .4s ease, width .4s ease;
+        &.active{
+            background-color: #0563D5;
+            width: 2rem;
+        }
+    }
+}
+.home_product_list_wrap {
+    overflow: hidden;
+    padding-bottom: 2rem;
+}
+.home_product_list_card_item{
+    display: flex;
+    flex-direction: column;
+    flex: none;
+    height: auto;
+    background: white;
+    box-shadow: 0 0 2rem 0rem #00000017;
+}
+.home_product_list_card_item_title {
+    margin-bottom: .6rem;
+    transition: color .4s ease;
+    &:hover{
+        color: #fc0000;
+    }
+}
+@media only screen and (max-width: 991px) {
+    .home_product_des {
+        max-width: 72rem;
+        margin-inline: auto;
+    }
+    .home_product_list_title_bg {
+        right: -5.7rem
+    }
+}
+@media only screen and (max-width: 767px) {
+    .home_product_list_card_item {
+        box-shadow: none;
+    }
+    .home_product {
+        padding-block: 4.4rem;
+    }
+    .home_product_list_title_bg{
+        right: -5rem;
+        width: 5.2rem;
+    }
+    .home_product_list_card_item_info{
+        padding: 0;
+    }
+    .home_product_list_card_item_sub {
+        font-size: 1.2rem;
+        line-height: 1em;
+    }
+    .home_product_control {
+        display: none;
+    }
+    .home_product_list_title {
+        padding-right:3.2rem;
+    }
+}

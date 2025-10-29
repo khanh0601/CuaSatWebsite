@@ -1,6 +1,6 @@
 <?php
     /**
-     * Template Name: Chi tiết sản phẩm
+     * Template Name: Chi tiết tin tức
      * Description:
      *
      * Tip:
@@ -11,8 +11,8 @@
      */
 
     get_header();
-    wp_enqueue_style('product_detail-css', get_template_directory_uri() . '/css/product_detail.css');
-    wp_enqueue_script('product_detail-js', get_template_directory_uri() . '/js/product_detail.js');
+    wp_enqueue_style('news_detail-css', get_template_directory_uri() . '/css/news_detail.css');
+    wp_enqueue_script('news_detail-js', get_template_directory_uri() . '/js/news_detail.js');
 
 ?>
     <div class='main' data-barba-namespace="product_detail" id="top">
@@ -20,133 +20,51 @@
             <div class="kl_container">
                 <div class="productdetail_breadcrumb_inner">
                     <a href="#" class="productdetail_breadcrumb_item">Trang chủ</a>
-                    <a href="#" class="productdetail_breadcrumb_item">Sản Phẩm</a>
-                    <a href="#" class="productdetail_breadcrumb_item">SỬA CỬA KÉO </a>
-                    <a href="#" class="productdetail_breadcrumb_item">cơ khí tổng hơp tai gò vấp</a>
+                    <a href="#" class="productdetail_breadcrumb_item">Tin tức</a>
+                    <a href="#" class="productdetail_breadcrumb_item">Sửa Cửa Kính Văn Phòng - Sửa Cửa Kính HCM</a>
                 </div>
             </div>
         </section>
-        <section class="productdetail_info">
+        <section class="news_detail_content">
             <div class="kl_container">
-                <div class="productdetail_info_inner">
-                    <div class="productdetail_info_left">
-                        <div class="swiper mySwiper2">
-                            <div class="swiper-wrapper productdetail_info_left_list">
-                                <div class="productdetail_info_left_list_item swiper-slide img_full">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/images/product_detail_info1.jpg" alt="" />
-                                </div>
-                                <div class="productdetail_info_left_list_item swiper-slide img_full">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/images/product_detail_info2.jpg" alt="" />
-                                </div>
-                                <div class="productdetail_info_left_list_item swiper-slide img_full">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/images/product_detail_info3.jpg" alt="" />
-                                </div>
-                                <div class="productdetail_info_left_list_item swiper-slide img_full">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/images/product_detail_info4.jpg" alt="" />
-                                </div>
-                                <div class="productdetail_info_left_list_item swiper-slide img_full">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/images/product_detail_info5.jpg" alt="" />
-                                </div>
-                            </div>
-                                <!-- <div class="swiper-button-next"></div>
-                                <div class="swiper-button-prev"></div> -->
-                        </div>
-                        <div thumbsSlider="" class="swiper mySwiper">
-                           <div class="swiper-wrapper productdetail_info_left_list">
-                                <div class="productdetail_info_left_list_item swiper-slide img_full">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/images/product_detail_info1.jpg" alt="" />
-                                </div>
-                                <div class="productdetail_info_left_list_item swiper-slide img_full">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/images/product_detail_info2.jpg" alt="" />
-                                </div>
-                                <div class="productdetail_info_left_list_item swiper-slide img_full">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/images/product_detail_info3.jpg" alt="" />
-                                </div>
-                                <div class="productdetail_info_left_list_item swiper-slide img_full">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/images/product_detail_info4.jpg" alt="" />
-                                </div>
-                                <div class="productdetail_info_left_list_item swiper-slide img_full">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/images/product_detail_info5.jpg" alt="" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="productdetail_info_right">
-                        <div class="productdetail_info_right_title txt_title txt_25">Cơ khí tổng hơp tai gò vấp</div>
-                        <div class="productdetail_info_right_social">
-                            <a href="#" class="productdetail_info_right_social_item img_full">
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/icon_plus.svg" alt="">
-                            </a>
-                            <a href="#" class="productdetail_info_right_social_item img_full">
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/icon_fb.svg" alt="">
-                            </a>
-                            <a href="#" class="productdetail_info_right_social_item img_full">
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/icon_twist.svg" alt="">
-                            </a>
-                            <a href="#" class="productdetail_info_right_social_item img_full">
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/icon_message.svg" alt="">
-                            </a>
-                            <a href="#" class="productdetail_info_right_social_item img_full">
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/icon_copy.svg" alt="">
-                            </a>
-                        </div>
-                        <div class="productdetail_info_right_view">
-                            <div class="productdetail_info_right_view_icon svg_full">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M2.42012 12.7132C2.28394 12.4975 2.21584 12.3897 2.17772 12.2234C2.14909 12.0985 2.14909 11.9015 2.17772 11.7766C2.21584 11.6103 2.28394 11.5025 2.42012 11.2868C3.54553 9.50484 6.8954 5 12.0004 5C17.1054 5 20.4553 9.50484 21.5807 11.2868C21.7169 11.5025 21.785 11.6103 21.8231 11.7766C21.8517 11.9015 21.8517 12.0985 21.8231 12.2234C21.785 12.3897 21.7169 12.4975 21.5807 12.7132C20.4553 14.4952 17.1054 19 12.0004 19C6.8954 19 3.54553 14.4952 2.42012 12.7132Z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M12.0004 15C13.6573 15 15.0004 13.6569 15.0004 12C15.0004 10.3431 13.6573 9 12.0004 9C10.3435 9 9.0004 10.3431 9.0004 12C9.0004 13.6569 10.3435 15 12.0004 15Z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </div><div class="productdetail_info_right_view_amount txt_14">52</div>
-                        </div>
-                        <div class="productdetail_info_right_price">
-                            <div class="productdetail_info_right_price_title txt_16 txt_wh_500">Giá bán:</div>
-                            <div class="productdetail_info_right_price_contact txt_20 txt_bold">Liên hệ</div>
-                        </div>
-                        <div class="productdetail_info_right_des">Cơ khí Tổng Hợp chuyên sửa chữa cửa sắt tại nhà TPHCM, liên hệ 0943279803 Mr.Hải . Sữa cửa sắt khó đóng mở, gẫy bản lề, cửa sệ , cửa kéo thay bạc đạn, bị kẹt, sửa cửa cuốn. </div>
-                    </div>
-                </div>
+                <div class="news_content_title txt_34 txt_title txt_des_border">Tin tức</div>
+                <div class="news_detail_content_des"></div>
             </div>
         </section>
-        <section class="productdetail_detail">
+        <section class="about_share">
             <div class="kl_container">
-                <div class="productdetail_detail_title txt_uppercase txt_17">Thông tin về sản phẩm</div>
-                <div class="productdetail_detail_des">
-                    <div class="productdetail_detail_des_img txt_center">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/product_content.jpg" alt="">
+                <div class="about_share_inner">
+                    <div class="about_share_txt txt_bold">Chia sẻ</div>
+                    <div class="productdetail_info_right_social">
+                        <!-- <?php if (!empty($about_share)) : ?>
+                            <?php foreach ($about_share as $item): ?>
+                                <a href="#" class="productdetail_info_right_social_item img_full">
+                                        <img src="<?= esc_url(wp_get_attachment_url($item['img'])) ?>" alt="">
+                                </a>
+                            <?php endforeach; ?>
+                      <?php endif; ?> -->
+                      <a href="#" class="productdetail_info_right_social_item img_full">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/icon_plus.svg" alt="">
+                        </a>
+                        <a href="#" class="productdetail_info_right_social_item icon_fb img_full">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/icon_fb.svg" alt="">
+                        </a>
+                        <a href="#" class="productdetail_info_right_social_item icon_twist img_full">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/icon_twist.svg" alt="">
+                        </a>
+                        <a href="#" class="productdetail_info_right_social_item icon_message img_full">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/icon_message.svg" alt="">
+                        </a>
+                        <a href="#" class="productdetail_info_right_social_item icon_copy img_full">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/icon_copy.svg" alt="">
+                        </a>
                     </div>
-                </div>
-                <div class="productdetail_detail_show">
-                    <div class="productdetail_detail_show_txt seemore active">
-                        <div class="productdetail_detail_show_txt_wrap">
-                            <div class="productdetail_detail_show_txt_inner">
-                                Xem thêm
-                            </div>
-                            <div class="productdetail_detail_show_txt_icon svg_full">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 20 20" fill="none">
-                                    <path d="M5 7.5L10 12.5L15 7.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                     <div class="productdetail_detail_show_txt compact">
-                        <div class="productdetail_detail_show_txt_wrap">
-                            <div class="productdetail_detail_show_txt_inner">
-                                Thu gọn
-                            </div>
-                            <div class="productdetail_detail_show_txt_icon svg_full">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 20 20" fill="none">
-                                    <path d="M5 7.5L10 12.5L15 7.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                    
                 </div>
             </div>
         </section>
         <section class="productdetail_relate">
             <div class="kl_container">
-                <div class="productdetail_detail_title txt_uppercase txt_17">Sản phẩm cùng loại</div>
+                <div class="news_content_title txt_34 txt_title txt_des_border">Bài viết liên quan</div>
                 <div class="home_product_list_wrap swiper home_product_swiper">
 					            <div class="home_product_list_card swiper-wrapper">
                                         <div class="home_product_list_card_item swiper-slide">
@@ -248,6 +166,5 @@
                             </div>
             </div>
         </section>
-
     </div>
 <?php get_footer(); ?>

@@ -1,6 +1,6 @@
 <?php
     /**
-     * Template Name: Dịch vụ
+     * Template Name: Tin tức
      * Description:
      *
      * Tip:
@@ -11,27 +11,27 @@
      */
 
     get_header();
-    wp_enqueue_style('service-css', get_template_directory_uri() . '/css/service.css');
-    wp_enqueue_script('service-js', get_template_directory_uri() . '/js/service.js');
+    wp_enqueue_style('news-css', get_template_directory_uri() . '/css/news.css');
+    wp_enqueue_script('news-js', get_template_directory_uri() . '/js/news.js');
     $pageID = get_queried_object_id();
 ?>
-    <div class='main' data-barba-namespace="service" id="top">
+    <div class='main' data-barba-namespace="product" id="top">
         <section class="productdetail_breadcrumb">
             <div class="kl_container">
                 <div class="productdetail_breadcrumb_inner">
                     <a href="#" class="productdetail_breadcrumb_item">Trang chủ</a>
-                    <a href="#" class="productdetail_breadcrumb_item">Dịch vụ</a>
+                    <a href="#" class="productdetail_breadcrumb_item">Sản phẩm</a>
                 </div>
             </div>
         </section>
-        <section class="service_content">
+        <section class="news_content">
             <div class="kl_container">
-                <div class="service_content_title txt_34 txt_title txt_des_border">Dịch vụ</div>
+                <div class="news_content_title txt_34 txt_title txt_des_border">Tin tức</div>
                 <div class="home_news_inner">
                 <div class="home_news_list">
                 <?php
                     $args = [
-                        'post_type'      => 'dich-vu',
+                        'post_type'      => 'tin-tuc',
                         'posts_per_page' => -1,
                         'orderby'        => 'date',
                         'order'          => 'DESC',
@@ -70,10 +70,12 @@
                         wp_reset_postdata();
                         else:
                     ?>
-                        <p>Không có dịch vụ nào.</p>
-                        <?php endif; ?>
+                        <p>Không có tin tức nào.</p>
+                    <?php endif; ?>
+
                 </div>
             </div>
+                <div class="home_news_list_paging"></div>
             </div>
         </section>
 

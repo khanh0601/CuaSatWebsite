@@ -97,3 +97,113 @@
 [28-Oct-2025 16:57:05 UTC] PHP Notice:  Trying to access array offset on value of type null in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\typerocket\vendor\typerocket\core\src\Http\Responders\PostsResponder.php on line 40
 [28-Oct-2025 16:57:05 UTC] PHP Notice:  Trying to access array offset on value of type null in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\typerocket\vendor\typerocket\core\src\Http\Responders\PostsResponder.php on line 40
 [28-Oct-2025 16:57:05 UTC] PHP Notice:  Trying to access array offset on value of type null in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\typerocket\vendor\typerocket\core\src\Http\Responders\PostsResponder.php on line 40
+[29-Oct-2025 03:57:56 UTC] PHP Notice:  Undefined variable: categories in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\page-templates\product.php on line 40
+[29-Oct-2025 03:57:56 UTC] PHP Warning:  Invalid argument supplied for foreach() in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\page-templates\product.php on line 40
+[29-Oct-2025 06:22:11 UTC] PHP Notice:  Trying to access array offset on value of type int in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 43
+[29-Oct-2025 06:22:11 UTC] PHP Notice:  Trying to access array offset on value of type int in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 43
+[29-Oct-2025 06:22:11 UTC] PHP Notice:  Trying to access array offset on value of type int in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 43
+[29-Oct-2025 06:22:11 UTC] PHP Notice:  Trying to access array offset on value of type int in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 43
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'url' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 43
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'alt' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 43
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'url' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 43
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'alt' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 43
+[29-Oct-2025 06:22:11 UTC] PHP Notice:  Trying to access array offset on value of type int in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 43
+[29-Oct-2025 06:22:11 UTC] PHP Notice:  Trying to access array offset on value of type int in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 43
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'url' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 43
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'alt' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 43
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'url' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 43
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'alt' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 43
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'url' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 43
+[29-Oct-2025 06:22:11 UTC] PHP Notice:  Uninitialized string offset: 0 in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 43
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'alt' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 43
+[29-Oct-2025 06:22:11 UTC] PHP Notice:  Uninitialized string offset: 0 in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 43
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'url' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 43
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'alt' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 43
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'url' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 43
+[29-Oct-2025 06:22:11 UTC] PHP Notice:  Uninitialized string offset: 0 in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 43
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'alt' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 43
+[29-Oct-2025 06:22:11 UTC] PHP Notice:  Uninitialized string offset: 0 in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 43
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'url' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 43
+[29-Oct-2025 06:22:11 UTC] PHP Notice:  Uninitialized string offset: 0 in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 43
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'alt' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 43
+[29-Oct-2025 06:22:11 UTC] PHP Notice:  Uninitialized string offset: 0 in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 43
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'url' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 43
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'alt' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 43
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'url' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 43
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'alt' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 43
+[29-Oct-2025 06:22:11 UTC] PHP Notice:  Trying to access array offset on value of type int in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 43
+[29-Oct-2025 06:22:11 UTC] PHP Notice:  Trying to access array offset on value of type int in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 43
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'url' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 43
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'alt' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 43
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'url' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 43
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'alt' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 43
+[29-Oct-2025 06:22:11 UTC] PHP Notice:  Trying to access array offset on value of type int in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 43
+[29-Oct-2025 06:22:11 UTC] PHP Notice:  Trying to access array offset on value of type int in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 43
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'url' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 43
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'alt' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 43
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'url' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 43
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'alt' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 43
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'url' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 43
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'alt' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 43
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'url' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 43
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'alt' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 43
+[29-Oct-2025 06:22:11 UTC] PHP Notice:  Trying to access array offset on value of type int in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 43
+[29-Oct-2025 06:22:11 UTC] PHP Notice:  Trying to access array offset on value of type int in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 43
+[29-Oct-2025 06:22:11 UTC] PHP Notice:  Trying to access array offset on value of type int in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 43
+[29-Oct-2025 06:22:11 UTC] PHP Notice:  Trying to access array offset on value of type int in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 43
+[29-Oct-2025 06:22:11 UTC] PHP Notice:  Undefined index: url in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 43
+[29-Oct-2025 06:22:11 UTC] PHP Notice:  Undefined index: alt in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 43
+[29-Oct-2025 06:22:11 UTC] PHP Notice:  Trying to access array offset on value of type int in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54
+[29-Oct-2025 06:22:11 UTC] PHP Notice:  Trying to access array offset on value of type int in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54
+[29-Oct-2025 06:22:11 UTC] PHP Notice:  Trying to access array offset on value of type int in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54
+[29-Oct-2025 06:22:11 UTC] PHP Notice:  Trying to access array offset on value of type int in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'url' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'alt' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'url' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'alt' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54
+[29-Oct-2025 06:22:11 UTC] PHP Notice:  Trying to access array offset on value of type int in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54
+[29-Oct-2025 06:22:11 UTC] PHP Notice:  Trying to access array offset on value of type int in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'url' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'alt' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'url' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'alt' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'url' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54
+[29-Oct-2025 06:22:11 UTC] PHP Notice:  Uninitialized string offset: 0 in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'alt' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54
+[29-Oct-2025 06:22:11 UTC] PHP Notice:  Uninitialized string offset: 0 in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'url' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'alt' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'url' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54
+[29-Oct-2025 06:22:11 UTC] PHP Notice:  Uninitialized string offset: 0 in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'alt' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54
+[29-Oct-2025 06:22:11 UTC] PHP Notice:  Uninitialized string offset: 0 in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'url' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54
+[29-Oct-2025 06:22:11 UTC] PHP Notice:  Uninitialized string offset: 0 in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'alt' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54
+[29-Oct-2025 06:22:11 UTC] PHP Notice:  Uninitialized string offset: 0 in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'url' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'alt' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'url' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'alt' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54
+[29-Oct-2025 06:22:11 UTC] PHP Notice:  Trying to access array offset on value of type int in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54
+[29-Oct-2025 06:22:11 UTC] PHP Notice:  Trying to access array offset on value of type int in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'url' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'alt' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'url' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'alt' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54
+[29-Oct-2025 06:22:11 UTC] PHP Notice:  Trying to access array offset on value of type int in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54
+[29-Oct-2025 06:22:11 UTC] PHP Notice:  Trying to access array offset on value of type int in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'url' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'alt' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'url' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'alt' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'url' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'alt' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'url' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54
+[29-Oct-2025 06:22:11 UTC] PHP Warning:  Illegal string offset 'alt' in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54
+[29-Oct-2025 06:22:11 UTC] PHP Notice:  Trying to access array offset on value of type int in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54
+[29-Oct-2025 06:22:11 UTC] PHP Notice:  Trying to access array offset on value of type int in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54
+[29-Oct-2025 06:22:11 UTC] PHP Notice:  Trying to access array offset on value of type int in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54
+[29-Oct-2025 06:22:11 UTC] PHP Notice:  Trying to access array offset on value of type int in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54
+[29-Oct-2025 06:22:11 UTC] PHP Notice:  Undefined index: url in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54
+[29-Oct-2025 06:22:11 UTC] PHP Notice:  Undefined index: alt in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54

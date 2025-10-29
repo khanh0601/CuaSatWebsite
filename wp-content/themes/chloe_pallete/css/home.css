@@ -410,7 +410,9 @@
 .home_news_list_item_time{
     color: #787878;
     position: relative;
+    padding-left: 2rem;
     &::before{
+        left: 0;
         position: absolute;
         content: url(../images/date-news.png);
         width: 1.6rem;
@@ -485,6 +487,15 @@
     width: calc(100% / 3);
     clip-path: polygon(3rem 0, 100% 0, 100% calc(100% - 2rem), calc(100% - 2rem) 100%, 0% 100%, 0rem 3rem);
 }
+.home_news_list_item_title{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 4.8rem;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    margin-bottom: 1.6rem;
+} 
 
 /* home_partner */
 .home_partner{

@@ -23,3 +23,11 @@
 .construction_content{
     padding-top: 2.5rem;
 }
+@media screen and (max-width:767px) {
+    .construction_content_list_item{
+        width: calc( 50% - .7rem);
+    }
+    .construction_content_list{
+        gap: 1.4rem;
+    }
+}

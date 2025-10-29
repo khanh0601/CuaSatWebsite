@@ -1,5 +1,6 @@
 html {
   font-size: 10px;
+  scroll-behavior: smooth;
 }
 :root {
   --padding-container : 4rem;
@@ -947,4 +948,41 @@ h1, h2, h3{
     .productdetail_breadcrumb_item:last-child::after{
         content: "";
     }
+}
+
+/* btn_icon */
+.btn_icon{
+      position: fixed;
+    right: 2.0rem;
+    background: rgb(255 255 255 / 80%) !important;
+    backdrop-filter: saturate(100%) blur(1.0rem) !important;
+    border-radius: 2rem;
+    width: auto;
+    z-index: 1001;
+    bottom: 11.1rem;
+    padding: .5rem 0;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.1) .0rem .4rem 1.2rem;
+  }
+  .btn_icon_item_img{
+    width: 3.5rem;
+  }
+  .btn_icon_item_txt{
+    font-size: 1rem;
+  }
+  .btn_icon_item{
+  padding: .5rem .3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.icon_top{
+  position: fixed;
+  bottom: 5rem;
+  right: 3rem;
+}
+.icon_top_inner{
+  width: 4.1rem;
 }

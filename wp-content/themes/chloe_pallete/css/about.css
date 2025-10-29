@@ -6,6 +6,7 @@
 }
 .about_content_des img{
     text-align: center;
+    width: 100%;
 }
 .productdetail_info_right_social_item{
     width: 3rem;
@@ -36,4 +37,7 @@
 }
 .about_share{
     padding-bottom: 2.5rem;
+}
+.about_share_txt{
+    margin-bottom: .5rem;
 }

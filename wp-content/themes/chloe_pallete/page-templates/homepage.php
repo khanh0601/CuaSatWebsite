@@ -49,7 +49,7 @@ $partner_des = tr_posts_field('partner_des', $pageID);
 $partner_items = tr_posts_field('partner_items', $pageID); // Mỗi item: ['image']
 
 ?>
-    <div class='main' data-barba-namespace="home">
+    <div class='main' data-barba-namespace="home" id="top">
     <section class="home_form">
             <div class="home_form_content">
                 <div class="home_form_content_close">

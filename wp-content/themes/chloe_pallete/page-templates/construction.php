@@ -20,7 +20,7 @@
     // === Tổng quan ===
     $construction_items = tr_posts_field('construction_items', $pageID); // Mỗi item: ['image', 'title']
 ?>
-    <div class='main' data-barba-namespace="about">
+    <div class='main' data-barba-namespace="about" id="top">
         <section class="productdetail_breadcrumb">
             <div class="kl_container">
                 <div class="productdetail_breadcrumb_inner">

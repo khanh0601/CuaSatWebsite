@@ -21,7 +21,7 @@
     // === Tổng quan ===
     $about_share = tr_posts_field('about_share', $pageID); // Mỗi item: ['img', 'link']
 ?>
-    <div class='main' data-barba-namespace="about">
+    <div class='main' data-barba-namespace="about" id="top">
         <section class="productdetail_breadcrumb">
             <div class="kl_container">
                 <div class="productdetail_breadcrumb_inner">
