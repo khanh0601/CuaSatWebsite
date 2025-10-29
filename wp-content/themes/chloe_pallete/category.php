@@ -1,72 +1,118 @@
 <?php
-global $disableFullpage;
-$disableFullpage= true;
-global $pageClass;
-$pageClass= "page-news-bg";
-get_header();
-$cate = get_queried_object();
-
-
-$allPost =[];
-
-if ( have_posts() ) {
-    while ( have_posts() ) {
-        the_post(); 
-        $allPost[] = $post;
-    } // end while
-} // end if
-
-$firstPost=[];
-$listPost=$allPost;
-
-$sectionImageID = tr_taxonomies_field('banner','category', $cate->term_id);
-$sectionImage =  wp_get_attachment_image_src($sectionImageID,'full', false, false)[0];
-$sectionTitle =  tr_taxonomies_field('banner_title', 'category', $cate->term_id);
-
-$allCate = get_categories(['hide_empty'      => true]);
-
+    get_header();
+    wp_enqueue_style('product-css', get_template_directory_uri() . '/css/product.css');
+    wp_enqueue_script('product-js', get_template_directory_uri() . '/js/product.js');
+    $pageID = get_queried_object_id();
+    $cate = get_queried_object();
 ?>
-
-<section  class=" animatedParent animateOnce section-news-list section-top ">
-    <div class=" section-padding  animated fadeInUpShort div_zindex">
-        <div class="container-d">
-            <div class=" section-page-nav animated <?= defaultAnimation(0) ?>">
-                <ul>
-                <?php foreach ($allCate as $key => $category) { ?>
-                    <li class="<?= $category->term_id==$cate->term_id?"active":"" ?>"><a href="<?=  get_category_link( $category->term_id ) ?>"><?= $category->name  ?></a></li>
-                <?php } ?>
-                </ul>
-            </div>
-            <div class="section-content-wrapper ">
-
-
-                <?php if(count($listPost)>0){ ?>
-                <div class="items post-list row animated fadeInUpShort delay-500">
-                     <?php foreach ($listPost as $key => $post) {
-                        echo '<div class="col-sm-6 col-lg-4">';
-                         nmc_get_template_part( 'partials/content-news', [
-                            'post' => $post
-                        ] );
-                        echo '</div>';
-                    } ?>
+    <div class='main' data-barba-namespace="product" id="top">
+        <section class="productdetail_breadcrumb">
+            <div class="kl_container">
+                <div class="productdetail_breadcrumb_inner">
+                    <a href="<?php echo home_url(); ?>" class="productdetail_breadcrumb_item">Trang chủ</a>
+                    <a href="<?php echo home_url('/san-pham'); ?>" class="productdetail_breadcrumb_item">Sản phẩm</a>
+                    <?php if (is_category() && $cate): ?>
+                        <a href="<?php echo get_category_link($cate->term_id); ?>" class="productdetail_breadcrumb_item"><?php echo esc_html($cate->name); ?></a>
+                    <?php endif; ?>
                 </div>
-                <?php } ?>
-
-                <?php
-                  if (function_exists('custom_pagination')) {
-                    custom_pagination();
-                  }
-                ?>
-
-
-
             </div>
+        </section>
+        <section class="product_content">
+            <div class="kl_container">
+                <div class="product_content_title txt_34 txt_title txt_des_border"><?php echo is_category() && $cate ? esc_html($cate->name) : 'Sản phẩm'; ?></div>
+                <?php
+                // Sử dụng main query của WordPress để hỗ trợ phân trang tự động
+                global $wp_query;
 
+                $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+                $total_pages = $wp_query->max_num_pages;
+
+                // Chỉ hiển thị nếu có bài viết
+                if (have_posts()):
+                ?>
+					    <div class="home_product_list">
+					        <div class="home_product_list_wrap ">
+					            <div class="home_product_list_card">
+					                <?php while (have_posts()): the_post(); ?>
+                                        <div class="home_product_list_card_item">
+                                            <div class="home_product_list_card_item_img_wrap">
+                                                <a href="<?php the_permalink(); ?>" class="home_product_list_card_item_img img_scale img_full img_abs">
+                                                    <div class="home_product_list_card_item_img_overlay"></div>
+                                                    <?php if (has_post_thumbnail()): ?>
+                                                        <?php the_post_thumbnail('full'); ?>
+                                                    <?php else: ?>
+                                                        <img src="<?php echo get_template_directory_uri(); ?>/images/home_product_hansat.jpg" alt="">
+                                                    <?php endif; ?>
+                                                </a>
+                                            </div>
+                                            <div class="home_product_list_card_item_info">
+                                                <a href="<?php the_permalink(); ?>" class="home_product_list_card_item_title txt_16 txt_bold txt_uppercase txt_center">
+                                                    <?php the_title(); ?>
+                                                </a>
+                                                <div class="home_product_list_card_item_des txt_center">
+                                                    <?php echo wp_trim_words(get_the_excerpt(), 20); ?>
+                                                </div>
+                                                <a href="#" target="__blank" class="home_product_list_card_item_sub txt_14 txt_bold txt_uppercase">
+                                                    Đăng ký nhận báo giá
+                                                    </a>
+                                            </div>
+                                        </div>
+                                    <?php endwhile; ?>
+                                </div>
+                            </div>
+        <?php if ($total_pages > 1): ?>
+        <div class="home_product_paging">
+            <div class="home_product_paging_page">Page <?php echo $paged; ?>/<?php echo $total_pages; ?></div>
+
+            <?php
+            $pagination_args = array(
+                'base'      => str_replace(999999999, '%#%', esc_url(get_pagenum_link(999999999))),
+                'format'    => '?paged=%#%',
+                'current'   => max(1, $paged),
+                'total'     => $total_pages,
+                'prev_text' => false,
+                'next_text' => false,
+                'type'      => 'array',
+                'mid_size'  => 2,
+                'end_size'  => 1,
+                'add_args'  => false,
+            );
+
+            $pages = paginate_links($pagination_args);
+
+            if (is_array($pages)) {
+                // Nút First
+                if ($paged > 1) {
+                    echo '<a href="' . get_category_link($cate->term_id) . '" class="home_product_paging_page">First</a>';
+                }
+
+                // Các số trang
+                foreach ($pages as $page) {
+                    if (strpos($page, 'current') !== false) {
+                        echo str_replace('page-numbers current', 'home_product_paging_page active', $page);
+                    } else {
+                        echo str_replace('page-numbers', 'home_product_paging_page', $page);
+                    }
+                }
+
+                // Nút Next và Last
+                if ($paged < $total_pages) {
+                    $next_page = get_pagenum_link($paged + 1);
+                    $last_page = get_pagenum_link($total_pages);
+                    echo '<a href="' . $next_page . '" class="home_product_paging_page">Next</a>';
+                    echo '<a href="' . $last_page . '" class="home_product_paging_page">Last</a>';
+                }
+            }
+            ?>
         </div>
+        <?php endif; ?>
     </div>
-</section>
+<?php
+    endif;
+?>
+                
+            </div>
+        </section>
 
-
-
+    </div>
 <?php get_footer(); ?>
-

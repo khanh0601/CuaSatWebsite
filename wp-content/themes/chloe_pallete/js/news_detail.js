@@ -1,18 +1,20 @@
-var swiper3 = new Swiper('.home_product_list_wrap', {
-    slidesPerView: 2,
-    spaceBetween: parseRem(12),
+  var swiper1 = new Swiper(".home_news_inner", {
+    slidesPerView: 1,
+    spaceBetween: parseRem(30),
+    pagination: {
+      el: '.home_news .home_product_pagi',
+      bulletClass: 'home_product_pagi_item',
+      bulletActiveClass: 'active',
+      clickable: true, 
+    },
     breakpoints: {
-      640: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
       768: {
-        slidesPerView: 3,
+        slidesPerView: 2,
         spaceBetween: 30,
       },
       1024: {
-        slidesPerView: 4,
+        slidesPerView: 3,
         spaceBetween: 30,
-      },
+      }
     }
   });

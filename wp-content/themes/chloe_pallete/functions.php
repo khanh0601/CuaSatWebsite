@@ -357,3 +357,29 @@ function archive_posttype() {
 
 }
 add_action( 'template_redirect', 'archive_posttype' );
+
+// Thiết lập số bài viết mỗi trang cho category archive và post type archives
+function custom_category_posts_per_page( $query ) {
+    if ( !is_admin() && $query->is_main_query() ) {
+        // Category archive
+        if ( $query->is_category() ) {
+            $query->set( 'posts_per_page', 9 );
+        }
+
+        // Dịch vụ archive
+        if ( $query->is_post_type_archive('dich-vu') ) {
+            $query->set( 'posts_per_page', 9 );
+        }
+
+        // Tin tức archive
+        if ( $query->is_post_type_archive('tin-tuc') ) {
+            $query->set( 'posts_per_page', 9 );
+        }
+
+        // Taxonomy dịch vụ phân loại
+        if ( $query->is_tax('dich-vu-phan-loai') ) {
+            $query->set( 'posts_per_page', 9 );
+        }
+    }
+}
+add_action( 'pre_get_posts', 'custom_category_posts_per_page' );

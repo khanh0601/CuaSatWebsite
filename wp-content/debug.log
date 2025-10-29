@@ -207,3 +207,35 @@
 [29-Oct-2025 06:22:11 UTC] PHP Notice:  Trying to access array offset on value of type int in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54
 [29-Oct-2025 06:22:11 UTC] PHP Notice:  Undefined index: url in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54
 [29-Oct-2025 06:22:11 UTC] PHP Notice:  Undefined index: alt in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\single.php on line 54
+[29-Oct-2025 14:57:31 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\CuaSatWebsite\wp-includes\class-wpdb.php on line 1988
+[29-Oct-2025 14:57:37 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\CuaSatWebsite\wp-includes\class-wpdb.php on line 1988
+[29-Oct-2025 14:58:28 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\CuaSatWebsite\wp-includes\class-wpdb.php on line 1988
+[29-Oct-2025 14:58:55 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ in D:\CuaSatWebsite\wp-includes\class-wpdb.php on line 1988
+[29-Oct-2025 15:34:17 UTC] PHP Notice:  Trying to access array offset on value of type null in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\typerocket\vendor\typerocket\core\src\Http\Responders\PostsResponder.php on line 40
+[29-Oct-2025 15:35:00 UTC] PHP Notice:  Trying to access array offset on value of type null in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\typerocket\vendor\typerocket\core\src\Http\Responders\PostsResponder.php on line 40
+[29-Oct-2025 15:35:00 UTC] PHP Notice:  Trying to access array offset on value of type null in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\typerocket\vendor\typerocket\core\src\Http\Responders\PostsResponder.php on line 40
+[29-Oct-2025 15:35:16 UTC] PHP Notice:  Trying to access array offset on value of type null in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\typerocket\vendor\typerocket\core\src\Http\Responders\PostsResponder.php on line 40
+[29-Oct-2025 15:36:12 UTC] PHP Notice:  Trying to access array offset on value of type null in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\typerocket\vendor\typerocket\core\src\Http\Responders\PostsResponder.php on line 40
+[29-Oct-2025 15:36:12 UTC] PHP Notice:  Trying to access array offset on value of type null in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\typerocket\vendor\typerocket\core\src\Http\Responders\PostsResponder.php on line 40
+[29-Oct-2025 15:36:35 UTC] PHP Notice:  Trying to access array offset on value of type null in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\typerocket\vendor\typerocket\core\src\Http\Responders\PostsResponder.php on line 40
+[29-Oct-2025 15:36:35 UTC] PHP Notice:  Trying to access array offset on value of type null in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\typerocket\vendor\typerocket\core\src\Http\Responders\PostsResponder.php on line 40
+[29-Oct-2025 16:14:01 UTC] PHP Notice:  Trying to access array offset on value of type null in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\typerocket\vendor\typerocket\core\src\Http\Responders\PostsResponder.php on line 40
+[29-Oct-2025 16:40:31 UTC] PHP Notice:  Trying to access array offset on value of type null in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\typerocket\vendor\typerocket\core\src\Http\Responders\TaxonomiesResponder.php on line 32
+[29-Oct-2025 16:40:49 UTC] PHP Notice:  Trying to access array offset on value of type null in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\typerocket\vendor\typerocket\core\src\Http\Responders\TaxonomiesResponder.php on line 32
+[29-Oct-2025 16:41:01 UTC] PHP Notice:  Trying to access array offset on value of type null in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\typerocket\vendor\typerocket\core\src\Http\Responders\PostsResponder.php on line 40
+[29-Oct-2025 16:41:57 UTC] PHP Notice:  Trying to access array offset on value of type null in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\typerocket\vendor\typerocket\core\src\Http\Responders\PostsResponder.php on line 40
+[29-Oct-2025 16:44:53 UTC] PHP Notice:  Trying to access array offset on value of type null in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\typerocket\vendor\typerocket\core\src\Http\Responders\PostsResponder.php on line 40
+[29-Oct-2025 16:57:19 UTC] PHP Notice:  Trying to access array offset on value of type null in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\typerocket\vendor\typerocket\core\src\Http\Responders\PostsResponder.php on line 40
+[29-Oct-2025 16:57:19 UTC] PHP Notice:  Trying to access array offset on value of type null in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\typerocket\vendor\typerocket\core\src\Http\Responders\PostsResponder.php on line 40
+[29-Oct-2025 16:57:35 UTC] PHP Notice:  Trying to access array offset on value of type null in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\typerocket\vendor\typerocket\core\src\Http\Responders\PostsResponder.php on line 40
+[29-Oct-2025 16:59:03 UTC] PHP Notice:  Trying to access array offset on value of type null in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\typerocket\vendor\typerocket\core\src\Http\Responders\PostsResponder.php on line 40
+[29-Oct-2025 16:59:03 UTC] PHP Notice:  Trying to access array offset on value of type null in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\typerocket\vendor\typerocket\core\src\Http\Responders\PostsResponder.php on line 40
+[29-Oct-2025 16:59:38 UTC] PHP Notice:  Trying to access array offset on value of type null in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\typerocket\vendor\typerocket\core\src\Http\Responders\TaxonomiesResponder.php on line 32
+[29-Oct-2025 16:59:43 UTC] PHP Notice:  Trying to access array offset on value of type null in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\typerocket\vendor\typerocket\core\src\Http\Responders\TaxonomiesResponder.php on line 32
+[29-Oct-2025 16:59:51 UTC] PHP Notice:  Trying to access array offset on value of type null in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\typerocket\vendor\typerocket\core\src\Http\Responders\PostsResponder.php on line 40
+[29-Oct-2025 17:02:28 UTC] PHP Notice:  Trying to access array offset on value of type null in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\typerocket\vendor\typerocket\core\src\Http\Responders\PostsResponder.php on line 40
+[29-Oct-2025 17:02:28 UTC] PHP Notice:  Trying to access array offset on value of type null in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\typerocket\vendor\typerocket\core\src\Http\Responders\PostsResponder.php on line 40
