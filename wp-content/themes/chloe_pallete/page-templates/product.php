@@ -14,6 +14,7 @@
     wp_enqueue_style('product-css', get_template_directory_uri() . '/css/product.css');
     wp_enqueue_script('product-js', get_template_directory_uri() . '/js/product.js');
     $pageID = get_queried_object_id();
+    $product_title = tr_posts_field('product_title', $pageID);
 ?>
     <div class='main' data-barba-namespace="product" id="top">
         <section class="productdetail_breadcrumb">
@@ -26,7 +27,7 @@
         </section>
         <section class="product_content">
             <div class="kl_container">
-                <div class="product_content_title txt_34 txt_title txt_des_border">Sản phẩm</div>
+                <div class="product_content_title txt_34 txt_title txt_des_border"><?= wp_kses_post($product_title) ?></div>
                 <?php
                 // Lấy tất cả bài viết
                 $posts = get_posts([

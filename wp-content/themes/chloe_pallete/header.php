@@ -56,10 +56,13 @@
            'raw'=>1
       ));  
   }
-  
+  $tel= tr_options_field('tr_theme_options.social_tele');
+    $mess= tr_options_field('tr_theme_options.social_mess');
+    $zalo= tr_options_field('tr_theme_options.social_zalo');
+    $map= tr_options_field('tr_theme_options.social_map');
+    $sms= tr_options_field('tr_theme_options.social_sms');
  ?>
 
-<?= tr_options_field('tr_theme_options.script_header');?>
 
 
 </head>
@@ -134,15 +137,59 @@
                     </div>
                     <div class="header_menu_inner">
                         <div class="header_menu_nav">
-                            <div class="header_menu_nav_wrap">
-                                <a href="/" class="header_menu_nav_item color_white txt_uppercase txt_15 txt_bold active">trang chủ</a>
-                            </div>
-                            <div class="header_menu_nav_wrap">
-                                <a href="#" class="header_menu_nav_item color_white txt_uppercase txt_15 txt_bold">giới thiệu</a>
-                            </div>
-                            <div class="header_menu_nav_wrap parent">
+                            <?php
+                            // Lấy URL hiện tại
+                            $current_url = home_url($_SERVER['REQUEST_URI']);
+
+                            // Hàm kiểm tra menu active
+                            function is_menu_active($menu_url, $current_url) {
+                                $menu_url = trailingslashit($menu_url);
+                                $current_url = trailingslashit($current_url);
+                                return $menu_url === $current_url;
+                            }
+
+                            // Lấy menu theo TÊN "header"
+                            $menu = wp_get_nav_menu_object('header');
+
+                            if ($menu) {
+                                $menu_items = wp_get_nav_menu_items($menu->term_id);
+
+                                // Tổ chức menu
+                                $menu_list = array();
+                                $menu_children = array();
+
+                                foreach ($menu_items as $item) {
+                                    if ($item->menu_item_parent == 0) {
+                                        $menu_list[$item->ID] = $item;
+                                    } else {
+                                        $menu_children[$item->menu_item_parent][] = $item;
+                                    }
+                                }
+
+                                // Render theo structure của theme
+                                foreach ($menu_list as $parent_id => $parent) {
+                                    $has_children = isset($menu_children[$parent_id]);
+                                    // Kiểm tra parent active
+                                    $is_parent_active = is_menu_active($parent->url, $current_url);
+
+                                    // Kiểm tra nếu có child active thì parent cũng active
+                                    $has_active_child = false;
+                                    if ($has_children) {
+                                        foreach ($menu_children[$parent_id] as $child) {
+                                            if (is_menu_active($child->url, $current_url)) {
+                                                $has_active_child = true;
+                                                break;
+                                            }
+                                        }
+                                    }
+
+                                    $is_active = $is_parent_active || $has_active_child;
+                                    $active_class = $is_active ? 'active' : '';
+                                    ?>
+                            <div class="header_menu_nav_wrap <?= $has_children ? 'parent' : '' ?>">
+                                <?php if ($has_children): ?>
                                 <div class="header_menu_nav_item_wrap">
-                                    <a href="#" class="header_menu_nav_item color_white txt_uppercase txt_15 txt_bold">dịch vụ</a>
+                                    <a href="<?= esc_url($parent->url) ?>" class="header_menu_nav_item color_white txt_uppercase txt_15 txt_bold <?= $active_class ?>"> <?= esc_html($parent->title) ?></a>
                                     <div class="header_menu_nav_item_child_icon img_full">
                                         <svg width="100%" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M9.5 4.25L6 7.75L2.5 4.25" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -150,41 +197,22 @@
                                     </div>
                                 </div>
                                 <div class="header_menu_nav_child">
-                                    <a href="#" class="header_menu_nav_child_item">LẮP ĐẶT SỬA CHỮA </a>
-                                    <a href="#" class="header_menu_nav_child_item">THI CÔNG </a>
-                                    <a href="#" class="header_menu_nav_child_item">TƯ VẤN BÁO GIÁ </a>
-                                    <a href="#" class="header_menu_nav_child_item">THIẾT KẾ </a>
+                                    <?php foreach ($menu_children[$parent_id] as $child):
+                                        $child_active = is_menu_active($child->url, $current_url) ? 'active' : '';
+                                    ?>
+                                    <a href="<?= esc_url($child->url) ?>" class="header_menu_nav_child_item <?= $child_active ?>"><?= esc_html($child->title) ?></a>
+                                    <?php endforeach; ?>
                                 </div>
+                                <?php else: ?>
+                                    <a href="<?= esc_url($parent->url) ?>" class="header_menu_nav_item color_white txt_uppercase txt_15 txt_bold <?= $active_class ?>">
+                                        <?= esc_html($parent->title) ?>
+                                    </a>
+                                <?php endif; ?>
                             </div>
-                            <div class="header_menu_nav_wrap parent">
-                                <div class="header_menu_nav_item_wrap">
-                                    <a href="#" class="header_menu_nav_item color_white txt_uppercase txt_15 txt_bold">sản phẩm</a>
-                                    <div class="header_menu_nav_item_child_icon img_full">
-                                        <svg width="100%" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M9.5 4.25L6 7.75L2.5 4.25" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div class="header_menu_nav_child">
-                                    <a href="#" class="header_menu_nav_child_item">THỢ HÀN SẮT</a>
-                                    <a href="#" class="header_menu_nav_child_item">SỬA CỬA KÉO</a>
-                                    <a href="#" class="header_menu_nav_child_item">SƠN CỬA SẮT</a>
-                                    <a href="#" class="header_menu_nav_child_item">CỬA KÉO MỚI</a>
-                                    <a href="#" class="header_menu_nav_child_item">MÁI TÔN</a>
-                                    <a href="#" class="header_menu_nav_child_item">SỬA CỬA SẮT</a>
-                                    <a href="#" class="header_menu_nav_child_item">SỬA CỬA CUỐN</a>
-                                    <a href="#" class="header_menu_nav_child_item">SỬA CỬA KÍNH</a>
-                                </div>
-                            </div>
-                            <div class="header_menu_nav_wrap">
-                                <a href="#" class="header_menu_nav_item color_white txt_uppercase txt_15 txt_bold">công trình</a>
-                            </div>
-                            <div class="header_menu_nav_wrap">
-                                <a href="#" class="header_menu_nav_item color_white txt_uppercase txt_15 txt_bold">tin tức</a>
-                            </div>
-                            <div class="header_menu_nav_wrap">
-                                <a href="#" class="header_menu_nav_item color_white txt_uppercase txt_15 txt_bold">liên hệ</a>
-                            </div>
+                            <?php
+                                    }
+                                }
+                                ?>
                         </div>
                         <div class="header_menu_search">
                             <div class="header_menu_search_input">
@@ -234,25 +262,25 @@
     </header>
     <section class="btn_icon desktop">
         <div class="btn_icon_inner">
-            <a href="#" class="btn_icon_item">
+            <a href="<?= wp_kses_post($map) ?>" class="btn_icon_item">
                 <div class="btn_icon_item_img img_full">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/icon-map.webp" alt="">
                 </div>
                 <div class="btn_icon_item_txt">Tìm đường</div>
             </a>
-             <a href="#" class="btn_icon_item">
+             <a href="<?= wp_kses_post($zalo) ?>" class="btn_icon_item">
                 <div class="btn_icon_item_img img_full">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/icon_zalo.png" alt="">
                 </div>
                 <div class="btn_icon_item_txt">Chat Zalo</div>
             </a>
-             <a href="#" class="btn_icon_item">
+             <a href="tel:<?= wp_kses_post($tel) ?>" class="btn_icon_item">
                 <div class="btn_icon_item_img img_full">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/icon_tel.png" alt="">
                 </div>
                 <div class="btn_icon_item_txt">Gọi điện</div>
             </a>
-             <a href="#" class="btn_icon_item">
+             <a href="<?= wp_kses_post($mess) ?>" class="btn_icon_item">
                 <div class="btn_icon_item_img img_full">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/icon_mess.webp" alt="">
                 </div>
@@ -260,9 +288,72 @@
             </a>
         </div>
     </section>
-    <section class="icon_top">
+    <section class="icon_top desktop">
         <a href="#top" class="icon_top_inner img_full">
             <img src="<?php echo get_template_directory_uri(); ?>/images/icon_top.png" alt="">
         </a>
     </section>
-  <div  class="fp-custom ">
+    <section class="btn_icon_mb tablet">
+        <a href="tel:<?= wp_kses_post($tel) ?>" class="btn_icon_mb_item">
+            <div class="btn_icon_mb_item_overlay1"></div>
+            <div class="btn_icon_mb_item_overlay"></div>
+            <div class="btn_icon_mb_item_inner">
+                <div class="btn_icon_mb_item_img img_full">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/tel_mb.png" alt="">
+                </div>
+            </div>
+        </a>
+        <a href="<?= wp_kses_post($zalo) ?>" class="btn_icon_mb_item">
+            <div class="btn_icon_mb_item_overlay1"></div>
+            <div class="btn_icon_mb_item_overlay"></div>
+            <div class="btn_icon_mb_item_inner">
+                <div class="btn_icon_mb_item_img img_full">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/zl_mb.png" alt="">
+                </div>
+            </div>
+        </a>
+        <a href="SMS:<?= wp_kses_post($sms) ?>" class="btn_icon_mb_item">
+            <div class="btn_icon_mb_item_overlay1"></div>
+            <div class="btn_icon_mb_item_overlay"></div>
+            <div class="btn_icon_mb_item_inner">
+                <div class="btn_icon_mb_item_img img_full">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/sms_mb.png" alt="">
+                </div>
+            </div>
+        </a>
+        <a href="<?= wp_kses_post($map) ?>" class="btn_icon_mb_item">
+            <div class="btn_icon_mb_item_overlay1"></div>
+            <div class="btn_icon_mb_item_overlay"></div>
+            <div class="btn_icon_mb_item_inner">
+                <div class="btn_icon_mb_item_img img_full">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/map_mb.webp" alt="">
+                </div>
+            </div>
+        </a>
+    </section>
+    <section class="btn_tel_mb tablet" >
+        <a href="tel:<?= wp_kses_post($tel) ?>" class="btn_tel_mb_inner">
+            <div class="btn_tel_mb_item">
+                <div class="btn_tel_mb_item_txt txt_bold txt_center txt_13">Tư vấn miễn phí (24/7)</div>
+                <div class="btn_tel_mb_item_txt txt_bold txt_center">0943279803</div>
+            </div>
+            <div class="btn_tel_mb_item">
+                <div class="btn_tel_mb_item_inner">
+                    <div class="btn_tel_mb_item_img img_full">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/icon_tel_mb.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </a>
+    </section>
+    <section class="btn_zl_mb tablet">
+        <a href="<?= wp_kses_post($zalo) ?>" class="btn_icon_mb_item">
+            <div class="btn_icon_mb_item_overlay1"></div>
+            <div class="btn_icon_mb_item_overlay"></div>
+            <div class="btn_icon_mb_item_inner">
+                <div class="btn_icon_mb_item_img img_full">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/zl.png" alt="">
+                </div>
+            </div>
+        </a>
+    </section>

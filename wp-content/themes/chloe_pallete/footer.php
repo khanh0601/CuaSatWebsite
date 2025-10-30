@@ -1,44 +1,18 @@
+<?php
+$footer_title= tr_options_field('tr_theme_options.footer_title');
+    $footer_address= tr_options_field('tr_theme_options.footer_address');
+    $footer_map1= tr_options_field('tr_theme_options.footer_map1');
+    $footer_map2= tr_options_field('tr_theme_options.footer_map2');
+ ?>
+
 <?php wp_footer(); ?>
 <footer class="footer">
         <div class="kl_container">
             <div class="footer_content">
                 <div class="footer_content_address">
-                    <div class="footer_content_address_title txt_24 txt_uppercase">CƠ KHÍ TỔNG HỢP NGUYỄN HẢI</div>
+                    <div class="footer_content_address_title txt_24 txt_uppercase"><?= wp_kses_post($footer_title) ?></div>
                     <div class="footer_content_address_des">
-                        <span class="footer_content_address_des_name color_white txt_bold txt_18">Địa chỉ:</span>
-                        <span class="footer_content_address_des_txt color_white txt_18">44/68 Đà Sơn Liên Chiếu Đà nẵng</span>
-                    </div>
-                    <div class="footer_content_address_des">
-                        <span class="footer_content_address_des_name color_white txt_bold txt_18">Điện thoại:</span>
-                        <span class="footer_content_address_des_txt color_white txt_18">0943279803</span>
-                    </div>
-                    <div class="footer_content_address_des">
-                        <span class="footer_content_address_des_name color_white txt_bold txt_18">Email:</span>
-                        <span class="footer_content_address_des_txt color_white txt_18">nth1991hai@gmail.com</span>
-                    </div>
-                    <div class="footer_content_address_des">
-                        <span class="footer_content_address_des_name color_white txt_bold txt_18">Website:</span>
-                        <span class="footer_content_address_des_txt color_white txt_18">cokhinguyenhai24h.com</span>
-                    </div>
-                    <div class="footer_content_address_des">
-                        <span class="footer_content_address_des_name color_white txt_bold txt_18">Địa chỉ:</span>
-                        <span class="footer_content_address_des_txt color_white txt_18">140/61 Đ. Lê Đức Thọ, P. 6, Gò Vấp, HCM</span>
-                    </div>
-                    <div class="footer_content_address_des">
-                        <span class="footer_content_address_des_name color_white txt_bold txt_18">Địa chi:</span>
-                        <span class="footer_content_address_des_txt color_white txt_18 txt_bold">62 Mỹ An 7, Ngũ Hành Sơn,Đà Nẵng</span>
-                    </div>
-                    <div class="footer_content_address_des">
-                        <span class="footer_content_address_des_name color_white txt_bold txt_18">Địa chỉ:</span>
-                        <span class="footer_content_address_des_txt color_white txt_18 txt_bold"> 693B/60,Trần Cao Vân, Thanh Khê, Đà Nẵng</span>
-                    </div>
-                    <div class="footer_content_address_des">
-                        <span class="footer_content_address_des_name color_white txt_bold txt_18">Địa chỉ:</span>
-                        <span class="footer_content_address_des_txt color_white txt_18 txt_bold">105 Nguyễn tri phương, thanh khê, Đà Nẵng</span>
-                    </div>
-                    <div class="footer_content_address_des">
-                        <span class="footer_content_address_des_name color_white txt_bold txt_18">Địa chỉ:</span>
-                        <span class="footer_content_address_des_txt color_white txt_18 txt_bold">89 CMT8, TT Dương Đông, Đà Nẵng</span>
+                        <?= wp_kses_post($footer_address) ?>
                     </div>
                 </div>
                 <div class="footer_content_item">
@@ -51,7 +25,7 @@
                 </div>
             </div>
             <div class="footer_copyright">
-                <div class="footer_copyright_left color_white txt_14">Copyright © 2024 <span class="txt_uppercase txt_bold">CƠ KHÍ TỔNG HỢP NGUYỄN HẢI</span>. Designed by Nina.vn</div>
+                <div class="footer_copyright_left color_white txt_14">Copyright © 2024 <span class="txt_uppercase txt_bold"><?= wp_kses_post($footer_title) ?></span>. Designed by Nina.vn</div>
                 <div class="footer_copyright_right">
                     <div class="footer_copyright_right_item txt_14 color_white">Đang xem: 1</div>
                     <div class="footer_copyright_right_item txt_14 color_white">Ngày: 35</div>

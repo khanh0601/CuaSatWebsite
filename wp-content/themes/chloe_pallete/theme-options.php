@@ -37,9 +37,11 @@ $form->setGroup( $this->getName() );
 
     
 
-    $social = $form->text('Facebook');
-    $social .= $form->text('Tiktok');
-    $social .= $form->text('Youtube');
+    $social = $form->text('social_tele')->setLabel('Số điện thoại');
+    $social .= $form->text('social_mess')->setLabel('Link messenger');
+    $social .= $form->text('social_map')->setLabel('Link map');
+    $social .= $form->text('social_zalo')->setLabel('Link zalo');
+    $social .= $form->text('social_sms')->setLabel('Số điện thoại nhắn tin');
 
     // popup
     $popup = $form->checkbox('enable_popup')->setLabel('Hiển thị');
@@ -49,6 +51,12 @@ $form->setGroup( $this->getName() );
     $script = $form->textarea('script_header')->setLabel('Header');
     $script .= $form->textarea('script_body')->setLabel('Body');
     $script .= $form->textarea('script_footer')->setLabel('Footer');
+
+
+    $footer = $form->text('footer_title')->setLabel('Tiêu đề');
+    $footer .= $form->editor('footer_address')->setLabel('Địa chỉ');
+    $footer .= $form->textarea('footer_map1')->setLabel('link map Chi nhánh');
+    $footer .= $form->textarea('footer_map2')->setLabel('link map văn phòng');
 
 
 
@@ -62,6 +70,7 @@ $form->setGroup( $this->getName() );
     ->addTab( 'Email SMTP', $smtp )
     ->addTab( 'Mạng xã hội', $social )
     ->addTab( 'Script', $script )
+    ->addTab( 'Footer', $footer )
     ->addTab( 'Popup', $popup )
     ->render( 'box' );
     echo $form->close();

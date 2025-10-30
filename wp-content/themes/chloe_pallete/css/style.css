@@ -986,3 +986,110 @@ h1, h2, h3{
 .icon_top_inner{
   width: 4.1rem;
 }
+.btn_icon_mb_item_inner{
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 5rem;
+  background-color: #FFC401;
+  border-radius: 50%;
+  .btn_icon_mb_item_img{
+    width: 3.5rem;
+    border-radius: 50%;
+    height: 3.5rem;
+    overflow: hidden;
+  }
+}
+.btn_icon_mb_item{
+  width: 7rem;
+  height: 7rem;
+  position: relative;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn_icon_mb_item_overlay{
+  background-color: #FFC401;
+  position: absolute;
+  animation-iteration-count: infinite;
+  opacity: .7;
+  border-radius: 50%;
+  animation-name: pulse;
+      border: 2px solid transparent;
+  inset: 0;
+      animation-duration: 1s;
+    animation-fill-mode: both;
+}
+.btn_icon_mb_item_overlay1{
+    position: absolute;
+    inset: 0.5rem;
+    background-color: transparent;
+    border-radius: 50%;
+    opacity: 0.5;
+    border: 2px solid #FFC401;
+    animation-iteration-count: infinite;
+        animation-duration: 1s;
+    animation-fill-mode: both;
+}
+.btn_icon_mb{
+  position: fixed;
+  left: 2rem;
+  bottom: 12rem;
+  flex-direction: column;
+  gap: 1.6rem;
+  z-index: 11111;
+}
+.btn_tel_mb_inner{
+  display: flex;
+  gap: 1rem;
+}
+.btn_tel_mb{
+  position: fixed;
+  left: 0;
+  bottom: 1rem;
+  padding: .6rem;
+  border-radius: 0 5rem 5rem 0;
+  background-color: #ff0000;
+}
+.btn_tel_mb_item_img{
+  width: 2.5rem;
+}
+.btn_tel_mb_item_inner{
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn_tel_mb *{
+  color: #fff;
+}
+.btn_zl_mb{
+  position: fixed;
+  z-index: 11111;
+  right: 2rem;
+  bottom: 23rem;
+  .btn_icon_mb_item_inner{
+    background-color: #0563D5;
+  }
+  .btn_icon_mb_item{
+    background-color: rgba(7, 41, 103, 0.35);
+  }
+  .btn_icon_mb_item_overlay{
+  background-color: #0563D5;
+}
+.btn_icon_mb_item_overlay1{
+    border: 2px solid #0563D5;
+}
+}
+@media screen and (max-width:991px) {
+  .btn_icon_mb.tablet{
+  display: flex;
+}
+}

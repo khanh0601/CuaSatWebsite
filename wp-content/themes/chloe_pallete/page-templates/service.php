@@ -14,6 +14,7 @@
     wp_enqueue_style('service-css', get_template_directory_uri() . '/css/service.css');
     wp_enqueue_script('service-js', get_template_directory_uri() . '/js/service.js');
     $pageID = get_queried_object_id();
+    $service_title = tr_posts_field('service_title', $pageID);
 ?>
     <div class='main' data-barba-namespace="service" id="top">
         <section class="productdetail_breadcrumb">
@@ -26,7 +27,7 @@
         </section>
         <section class="service_content">
             <div class="kl_container">
-                <div class="service_content_title txt_34 txt_title txt_des_border">Dịch vụ</div>
+                <div class="service_content_title txt_34 txt_title txt_des_border"><?= wp_kses_post($service_title) ?></div>
                 <div class="home_news_inner">
                 <div class="home_news_list">
                 <?php

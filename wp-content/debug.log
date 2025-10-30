@@ -239,3 +239,23 @@
 [29-Oct-2025 16:59:51 UTC] PHP Notice:  Trying to access array offset on value of type null in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\typerocket\vendor\typerocket\core\src\Http\Responders\PostsResponder.php on line 40
 [29-Oct-2025 17:02:28 UTC] PHP Notice:  Trying to access array offset on value of type null in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\typerocket\vendor\typerocket\core\src\Http\Responders\PostsResponder.php on line 40
 [29-Oct-2025 17:02:28 UTC] PHP Notice:  Trying to access array offset on value of type null in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\typerocket\vendor\typerocket\core\src\Http\Responders\PostsResponder.php on line 40
+[30-Oct-2025 04:44:14 UTC] PHP Notice:  Trying to access array offset on value of type null in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\typerocket\vendor\typerocket\core\src\Http\Responders\TaxonomiesResponder.php on line 32
+[30-Oct-2025 04:44:28 UTC] PHP Notice:  Trying to access array offset on value of type null in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\typerocket\vendor\typerocket\core\src\Http\Responders\TaxonomiesResponder.php on line 32
+[30-Oct-2025 04:44:41 UTC] PHP Notice:  Trying to access array offset on value of type null in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\typerocket\vendor\typerocket\core\src\Http\Responders\TaxonomiesResponder.php on line 32
+[30-Oct-2025 04:44:50 UTC] PHP Notice:  Trying to access array offset on value of type null in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\typerocket\vendor\typerocket\core\src\Http\Responders\TaxonomiesResponder.php on line 32
+[30-Oct-2025 05:24:06 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_menu_active() in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\header.php:160
+Stack trace:
+#0 D:\CuaSatWebsite\wp-includes\template.php(810): require_once()
+#1 D:\CuaSatWebsite\wp-includes\template.php(745): load_template()
+#2 D:\CuaSatWebsite\wp-includes\general-template.php(48): locate_template()
+#3 D:\CuaSatWebsite\wp-content\themes\chloe_pallete\taxonomy-dich-vu-phan-loai.php(10): get_header()
+#4 D:\CuaSatWebsite\wp-includes\template-loader.php(106): include('D:\\CuaSatWebsit...')
+#5 D:\CuaSatWebsite\wp-blog-header.php(19): require_once('D:\\CuaSatWebsit...')
+#6 D:\CuaSatWebsite\index.php(17): require('D:\\CuaSatWebsit...')
+#7 {main}
+  thrown in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\header.php on line 160
+[30-Oct-2025 08:24:13 UTC] PHP Notice:  Trying to access array offset on value of type null in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\typerocket\vendor\typerocket\core\src\Http\Responders\PostsResponder.php on line 40
+[30-Oct-2025 08:24:34 UTC] PHP Notice:  Trying to access array offset on value of type null in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\typerocket\vendor\typerocket\core\src\Http\Responders\PostsResponder.php on line 40
+[30-Oct-2025 08:25:30 UTC] PHP Notice:  Trying to access array offset on value of type null in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\typerocket\vendor\typerocket\core\src\Http\Responders\PostsResponder.php on line 40
+[30-Oct-2025 08:25:30 UTC] PHP Notice:  Trying to access array offset on value of type null in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\typerocket\vendor\typerocket\core\src\Http\Responders\PostsResponder.php on line 40
+[30-Oct-2025 08:26:01 UTC] PHP Notice:  Trying to access array offset on value of type null in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\typerocket\vendor\typerocket\core\src\Http\Responders\PostsResponder.php on line 40

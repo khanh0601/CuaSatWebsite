@@ -14,6 +14,7 @@
     wp_enqueue_style('news-css', get_template_directory_uri() . '/css/news.css');
     wp_enqueue_script('news-js', get_template_directory_uri() . '/js/news.js');
     $pageID = get_queried_object_id();
+    $news_title = tr_posts_field('news_title', $pageID);
 ?>
     <div class='main' data-barba-namespace="product" id="top">
         <section class="productdetail_breadcrumb">
@@ -26,7 +27,7 @@
         </section>
         <section class="news_content">
             <div class="kl_container">
-                <div class="news_content_title txt_34 txt_title txt_des_border">Tin tức</div>
+                <div class="news_content_title txt_34 txt_title txt_des_border"><?= wp_kses_post($news_title) ?></div>
                 <div class="home_news_inner">
                 <div class="home_news_list">
                 <?php

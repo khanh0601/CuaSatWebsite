@@ -129,6 +129,39 @@ add_action('edit_form_after_title', function($post) use($editorSettings) {
 
 
     }
+     else if($post->post_type == 'page' && basename(get_page_template())=="service.php") {
+        remove_post_type_support( 'page', 'editor' );
+
+        $form = tr_form();
+        echo beginBox("Nội dung",true);
+        echo $form->text('service_title')->setLabel("Tiêu đề liên hệ");
+        echo endBox();
+
+
+
+    }
+    else if($post->post_type == 'page' && basename(get_page_template())=="news.php") {
+        remove_post_type_support( 'page', 'editor' );
+
+        $form = tr_form();
+        echo beginBox("Nội dung",true);
+        echo $form->text('news_title')->setLabel("Tiêu đề liên hệ");
+        echo endBox();
+
+
+
+    }
+     else if($post->post_type == 'page' && basename(get_page_template())=="product.php") {
+        remove_post_type_support( 'page', 'editor' );
+
+        $form = tr_form();
+        echo beginBox("Nội dung",true);
+        echo $form->text('product_title')->setLabel("Tiêu đề liên hệ");
+        echo endBox();
+
+
+
+    }
 
     else if($post->post_type == 'page'){
         $form = tr_form();
