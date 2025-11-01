@@ -28,22 +28,23 @@
         <section class="product_content">
             <div class="kl_container">
                 <div class="product_content_title txt_34 txt_title txt_des_border"><?= wp_kses_post($product_title) ?></div>
-                <?php
-                // Lấy tất cả bài viết
-                $posts = get_posts([
-                    'posts_per_page' => -1,
-                    'orderby'        => 'date',
-                    'order'          => 'DESC',
-                    'post_type'      => 'post',
-                ]);
+                <div class="product_content_inner">
+                    <?php
+                    // Lấy tất cả bài viết
+                    $posts = get_posts([
+                        'posts_per_page' => -1,
+                        'orderby'        => 'date',
+                        'order'          => 'DESC',
+                        'post_type'      => 'post',
+                    ]);
 
-                // Chỉ hiển thị nếu có bài viết
-                if (! empty($posts)):
-                ?>
-					    <div class="home_product_list">
-					        <div class="home_product_list_wrap ">
-					            <div class="home_product_list_card">
-					                <?php foreach ($posts as $post): setup_postdata($post); ?>
+                    // Chỉ hiển thị nếu có bài viết
+                    if (! empty($posts)):
+                    ?>
+                        <div class="home_product_list">
+                            <div class="home_product_list_wrap ">
+                                <div class="home_product_list_card">
+                                    <?php foreach ($posts as $post): setup_postdata($post); ?>
                                         <div class="home_product_list_card_item">
                                             <div class="home_product_list_card_item_img_wrap">
                                                 <a href="<?php echo get_permalink($post->ID); ?>" class="home_product_list_card_item_img img_scale img_full img_abs">
@@ -71,20 +72,23 @@
                                     wp_reset_postdata(); ?>
                                 </div>
                             </div>
-        <div class="home_product_paging">
-            <div class="home_product_paging_page">Page 1/3</div>
-            <a href="$" class="home_product_paging_page">First</a>
-            <a href="$" class="home_product_paging_page">1</a>
-            <a href="$" class="home_product_paging_page">2</a>
-            <a href="$" class="home_product_paging_page">3</a>
-            <a href="$" class="home_product_paging_page">Next</a>
-            <a href="$" class="home_product_paging_page">Last</a>
-        </div>
-    </div>
-<?php
-    endif;
-?>
-                
+                            <div class="home_product_paging">
+                                <div class="home_product_paging_page">Page 1/3</div>
+                                <a href="#" class="home_product_paging_page">First</a>
+                                <a href="#" class="home_product_paging_page">1</a>
+                                <a href="#" class="home_product_paging_page">2</a>
+                                <a href="#" class="home_product_paging_page">3</a>
+                                <a href="#" class="home_product_paging_page">Next</a>
+                                <a href="#" class="home_product_paging_page">Last</a>
+                            </div>
+                        </div>
+                    <?php
+                        endif;
+                    ?>
+                    <div class="product_content_category">
+                        
+                    </div>
+                </div>
             </div>
         </section>
 
