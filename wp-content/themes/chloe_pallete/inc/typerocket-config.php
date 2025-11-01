@@ -157,6 +157,10 @@ add_action('edit_form_after_title', function($post) use($editorSettings) {
         $form = tr_form();
         echo beginBox("Nội dung",true);
         echo $form->text('product_title')->setLabel("Tiêu đề liên hệ");
+        echo $form->repeater('product_items')->setLabel("Danh sách vị trí thợ")->setFields([
+                $form->text('title')->setLabel("Tiêu đề"),
+                $form->text('link')->setLabel("link"),
+        ]);
         echo endBox();
 
 

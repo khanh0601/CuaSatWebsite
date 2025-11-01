@@ -15,6 +15,7 @@
     wp_enqueue_script('product-js', get_template_directory_uri() . '/js/product.js');
     $pageID = get_queried_object_id();
     $product_title = tr_posts_field('product_title', $pageID);
+    $product_items = tr_posts_field('product_items', $pageID);
 ?>
     <div class='main' data-barba-namespace="product" id="top">
         <section class="productdetail_breadcrumb">
@@ -86,7 +87,11 @@
                         endif;
                     ?>
                     <div class="product_content_category">
-                        
+                        <?php if (!empty($product_items)) : ?>
+                            <?php foreach ($product_items as $item): ?>
+                        <a href="<?= $item['link'] ?>" class="product_content_category_item txt_18 txt_bold"><?= $item['title'] ?></a>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>

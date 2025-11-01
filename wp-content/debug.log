@@ -286,3 +286,10 @@ Stack trace:
 [01-Nov-2025 09:04:41 UTC] PHP Notice:  Trying to access array offset on value of type null in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\typerocket\vendor\typerocket\core\src\Http\Responders\PostsResponder.php on line 40
 [01-Nov-2025 09:04:46 UTC] PHP Notice:  Trying to access array offset on value of type null in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\typerocket\vendor\typerocket\core\src\Http\Responders\PostsResponder.php on line 40
 [01-Nov-2025 09:04:51 UTC] PHP Notice:  Trying to access array offset on value of type null in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\typerocket\vendor\typerocket\core\src\Http\Responders\PostsResponder.php on line 40
+[01-Nov-2025 16:16:50 UTC] PHP Notice:  Undefined variable: current_term in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\category.php on line 115
+[01-Nov-2025 16:16:50 UTC] PHP Notice:  Undefined variable: current_term in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\category.php on line 116
+[01-Nov-2025 16:16:56 UTC] PHP Notice:  Undefined variable: current_term in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\category.php on line 115
+[01-Nov-2025 16:16:56 UTC] PHP Notice:  Undefined variable: current_term in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\category.php on line 116
+[01-Nov-2025 16:17:13 UTC] PHP Notice:  Undefined variable: current_term in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\category.php on line 115
+[01-Nov-2025 16:17:13 UTC] PHP Notice:  Undefined variable: current_term in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\category.php on line 116
+[01-Nov-2025 16:20:01 UTC] PHP Notice:  Undefined variable: current_term in D:\CuaSatWebsite\wp-content\themes\chloe_pallete\category.php on line 115
